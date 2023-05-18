@@ -8,6 +8,11 @@ export const MainContainer = styled.div`
     width: 100%;
     height: 100vh;
     z-index: 9999;
+
+    @media screen and (max-width: 600px) {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
 `
 
 export const TitleContainer = styled.div`
@@ -31,7 +36,7 @@ export const DescriptionContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-    width: 1000px;
+    width: 1100px;
     text-align: center;
     margin-top: 2rem;
 

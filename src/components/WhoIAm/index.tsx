@@ -32,13 +32,20 @@ const WhoIAmComp: FC = () => {
                     </SpanBold>
                 </Description>
                 <Description>
-
-                    I am always looking for<SpanBold> new challenges to continue growing
-                        professionally and i am willing to work as a team and
-                        collaborate with my co-workers to achieve the company's
-                        goals.</SpanBold> My focus is always to provide high quality service
-                    and meet customer expectations.<SpanBold> I am sure that my experience
-                        and skills would be of great benefit to your company.</SpanBold>
+                    I am always looking for
+                    <SpanBold>
+                        {' '}
+                        new challenges to continue growing professionally and i
+                        am willing to work as a team and collaborate with my
+                        co-workers to achieve the company's goals.
+                    </SpanBold>{' '}
+                    My focus is always to provide high quality service and meet
+                    customer expectations.
+                    <SpanBold>
+                        {' '}
+                        I am sure that my experience and skills would be of
+                        great benefit to your company.
+                    </SpanBold>
                 </Description>
             </DescriptionContainer>
         </MainContainer>
