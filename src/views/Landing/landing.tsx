@@ -7,7 +7,7 @@ import EducationComp from '../../components/Education'
 import WorkComp from '../../components/Work'
 import EntrepreneurComp from '../../components/Entrepreneur'
 import SkillsComp from '../../components/Skills'
-// import BootcampProjects from '../../components/ProjectsBootCamp'
+import BootcampProjects from '../../components/BootCampProjects'
 
 const Landing: FC = () => {
     return (
@@ -25,7 +25,7 @@ const Landing: FC = () => {
             <DividerWithChip label="Skills" />
             <SkillsComp />
             <DividerWithChip label="BootCamp Projects" />
-            {/* <BootcampProjects /> */}
+            <BootcampProjects />
         </>
     )
 }

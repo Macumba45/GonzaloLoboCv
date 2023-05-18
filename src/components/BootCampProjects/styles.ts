@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Carousel from 'react-material-ui-carousel'
+
 
 
 export const MainContainer = styled.div`
@@ -11,20 +13,20 @@ export const MainContainer = styled.div`
     }
 `
 
-// export const FullWidthCarousel = styled(Carousel)`
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     margin: 0;
-//     padding: 0;
+export const FullWidthCarousel = styled(Carousel)`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 
-//     .carousel-root {
-//         width: 100%;
-//         margin: 0;
-//         padding: 0;
-//     }
-// `
+    .carousel-root {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+`
 
 export const TitleContainer = styled.div`
     display: flex;
