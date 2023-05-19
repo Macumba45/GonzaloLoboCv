@@ -2,28 +2,47 @@ import styled from 'styled-components'
 import Carousel from 'react-material-ui-carousel'
 
 export const MainContainer = styled.div`
-    width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
     margin-top: 5rem;
+    width: 100%;
     z-index: 9999;
+    height: 100vh;
     @media screen and (max-width: 600px) {
-        height: 140vh;
+        height: 130vh;
     }
 `
 
+export const ImageContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`;
+
+export const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+`
+
+export const ContainerMap = styled.div`
+    display: flex;
+    justify-content: center;
+    height: 900px;
+`
 export const FullWidthCarousel = styled(Carousel)`
     width: 100%;
+    height: 1500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0;
     padding: 0;
 
-    .carousel-root {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
 `
 
 export const TitleContainer = styled.div`
@@ -43,74 +62,15 @@ export const Title = styled.h1`
     text-align: center;
 `
 
-export const SkillsContainerAll = styled.div`
-    justify-content: center;
-    align-items: center;
-    @media screen and (max-width: 600px) {
-        flex-direction: column;
-    }
-`
-
-export const SkillsContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 1000px;
-    line-height: 2.5rem;
-    margin-bottom: 2rem;
-
-    margin-top: 3rem;
-    @media screen and (max-width: 600px) {
-        flex-direction: column;
-        margin-left: 0rem;
-        margin-right: 0rem;
-    }
-`
-
 export const SkillsContainerLogo = styled.div`
     display: flex;
     flex-wrap: wrap;
-    width: 1200px;
+    width: auto !important;
     justify-content: center;
     align-items: center;
     @media screen and (max-width: 600px) {
         width: 390px;
     }
-`
-
-export const ContainerProject = styled.div`
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5rem;
-    height: 50rem;
-`
-
-export const ContainerProjectTitle = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 5rem;
-`
-
-export const TitleProject = styled.p`
-    font-family: ${({ theme }) => theme.fonts.poppins};
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-    background-color: black;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    border-radius: 20px;
-`
-
-export const ContainerProjectDescription = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 `
 
 export const ContainerTech = styled.div`
@@ -140,10 +100,8 @@ export const ImgColombia = styled.img`
 
 export const ImgTech = styled.img`
     width: 3rem;
-    height: auto;
     margin-left: 2rem;
     margin-right: 2rem;
-
     @media screen and (max-width: 600px) {
         width: 3rem;
     }

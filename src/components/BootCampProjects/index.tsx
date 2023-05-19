@@ -1,24 +1,17 @@
 import { FC, memo, useEffect, useState } from 'react'
 import { chunk } from 'lodash'
 import {
-    SkillsContainerAll,
-    SkillsContainer,
     MainContainer,
     Title,
     TitleContainer,
     ImgColombia,
-    SkillsContainerLogo,
-    ContainerProject,
-    TitleProject,
-    ProjectDescription,
-    ContainerProjectTitle,
-    ContainerProjectDescription,
-    ImgTech,
-    ContainerTech,
     FullWidthCarousel,
+    Container,
+    ImageContainer,
 } from './styles'
+import { Button } from '@mui/material'
+import TechAccordion from '../AccordionTechs'
 
-import { Accordion, AccordionDetails, Button } from '@mui/material'
 
 const paul = require('../../assets/templates/PAUL.png')
 const brenes = require('../../assets/templates/BRENES.png')
@@ -41,7 +34,7 @@ const mui = require('../../assets/skills/mui.png')
 const node = require('../../assets/skills/node1.png')
 const postgres = require('../../assets/skills/postgres.png')
 
-const skills = [
+const projects = [
     {
         img: paul,
         title: 'Project I',
@@ -69,11 +62,11 @@ const skills = [
         tech3: type,
         tech4: react,
         tech5: docker,
-        tech6: git,
+        tech6: postgres,
         tech7: mongo,
         tech8: styled,
         tech9: node,
-        tech10: postgres,
+
     },
     {
         img: rick,
@@ -85,11 +78,10 @@ const skills = [
         tech3: type,
         tech4: react,
         tech5: docker,
-        tech6: git,
+        tech6: postgres,
         tech7: mongo,
         tech8: styled,
         tech9: node,
-        tech10: postgres,
     },
     {
         img: cocktails,
@@ -99,16 +91,15 @@ const skills = [
         tech1: css,
         tech2: javas,
         tech3: type,
-        tech4: firebase,
-        tech5: react,
-        tech6: docker,
-        tech7: framer,
-        tech8: git,
-        tech9: mongo,
-        tech10: styled,
-        tech11: mui,
-        tech12: node,
-        tech13: postgres,
+        tech4: react,
+        tech5: docker,
+        tech6: framer,
+        tech7: git,
+        tech8: mongo,
+        tech9: styled,
+        tech10: mui,
+        tech11: node,
+        tech12: postgres,
     },
     {
         img: inversor,
@@ -118,26 +109,25 @@ const skills = [
         tech1: css,
         tech2: javas,
         tech3: type,
-        tech4: firebase,
-        tech5: react,
-        tech6: docker,
-        tech7: framer,
-        tech8: git,
-        tech9: mongo,
-        tech10: styled,
-        tech11: mui,
-        tech12: node,
-        tech13: postgres,
+        tech4: react,
+        tech5: docker,
+        tech6: framer,
+        tech7: git,
+        tech8: mongo,
+        tech9: styled,
+        tech10: mui,
+        tech11: node,
+        tech12: postgres,
     },
 ]
 
-const TechAccordion = ({ techs }: any) => {
-    const [expanded, setExpanded] = useState(false)
+
+
+const BootcampProjects: FC = () => {
+    const imagesGrouped = chunk(projects, 3) // Agrupamos los elementos en sub-arreglos de tres
+    const imagesGroupedMobile = chunk(projects, 1)
     const [isMobile, setIsMobile] = useState(false)
 
-    const handleAccordionChange = () => {
-        setExpanded(!expanded)
-    }
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768)
@@ -148,151 +138,76 @@ const TechAccordion = ({ techs }: any) => {
     }, [])
 
     return (
-        <Accordion
-            sx={{
-                backgroundColor: '#a2a2a2',
-                width: '230px',
-                display: 'flex',
-                flexDirection: 'column',
-                margin: '0 auto',
-            }}
-            expanded={expanded}
-            onChange={handleAccordionChange}
-        >
-            <Button
-                sx={{
-                    backgroundColor: 'black',
-                    '&:hover': {
-                        backgroundColor: 'yellow',
-                        color: "black "// Cambia este valor por el color deseado
-                    },
-                }}
-                variant="contained"
-                onClick={handleAccordionChange}
-            >
-                Techs used
-            </Button>
-            <AccordionDetails>
-                <ContainerTech>
-                    {techs.map((tech: any, index: any) => (
-                        <ImgTech key={index} src={tech} />
-                    ))}
-                </ContainerTech>
-            </AccordionDetails>
-        </Accordion>
-    )
-}
-
-const BootcampProjects: FC = () => {
-    const imagesGrouped = chunk(skills, 3); // Agrupamos los elementos en sub-arreglos de tres
-    const imagesGroupedMobile = chunk(skills, 1);
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-        handleResize(); // inicializa el estado en función del ancho actual
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    return (
         <MainContainer>
             <TitleContainer>
                 <Title>BootCamp Projects</Title>
             </TitleContainer>
-            <SkillsContainerAll>
-                <SkillsContainer>
-                    {isMobile ? (
-                        <FullWidthCarousel interval={8000}>
-                            {imagesGroupedMobile.map((group, index) => (
-                                <ContainerProject key={index}>
-                                    {group.map((skill, skillIndex) => (
-                                        <div key={skillIndex}>
-                                            <ContainerProjectTitle>
-                                                <TitleProject>
-                                                    {skill.title}
-                                                </TitleProject>
-                                            </ContainerProjectTitle>
-                                            <ImgColombia
-                                                src={skill.img}
-                                                alt={skill.title}
+            <Container>
+                {isMobile ? (
+                    <FullWidthCarousel interval={5000}>
+                        {imagesGroupedMobile.map((group, index) => (
+                            <Container key={index}>
+                                {group.map((item, subIndex) => (
+                                    <ImageContainer key={subIndex}>
+                                        {item.img && <ImgColombia src={item.img} />}
+                                        {item.img && (
+                                            <TechAccordion
+                                                techs={[
+                                                    item.tech,
+                                                    item.tech1,
+                                                    item.tech2,
+                                                    item.tech3,
+                                                    item.tech4,
+                                                    item.tech5,
+                                                    item.tech6,
+                                                    item.tech7,
+                                                    item.tech8,
+                                                    item.tech9,
+                                                    item.tech10,
+                                                    item.tech11,
+                                                    item.tech12,
+                                                ].filter(Boolean)} // Filtrar las tecnologías para eliminar las que sean falsas (undefined, null, etc.)
                                             />
-                                            <ContainerProjectDescription>
-                                                <ProjectDescription>
-                                                    <TechAccordion
-                                                        techs={[
-                                                            skill.tech,
-                                                            skill.tech1,
-                                                            skill.tech2,
-                                                            skill.tech3,
-                                                            skill.tech4,
-                                                            skill.tech5,
-                                                            skill.tech6,
-                                                            skill.tech7,
-                                                            skill.tech8,
-                                                            skill.tech9,
-                                                            skill.tech10,
-                                                            skill.tech11,
-                                                            skill.tech12,
-                                                            skill.tech13,
-                                                        ]}
-                                                    />
-                                                </ProjectDescription>
-                                            </ContainerProjectDescription>
-                                        </div>
-                                    ))}
-                                </ContainerProject>
+                                        )}
+                                    </ImageContainer>
+                                ))}
+                            </Container>
+                        ))}
+                    </FullWidthCarousel>
+                ) : (<FullWidthCarousel interval={5000}>
+                    {imagesGrouped.map((group, index) => (
+                        <Container key={index}>
+                            {group.map((item, subIndex) => (
+                                <ImageContainer key={subIndex}>
+                                    {item.img && <ImgColombia src={item.img} />}
+                                    {item.img && (
+                                        <TechAccordion
+                                            techs={[
+                                                item.tech,
+                                                item.tech1,
+                                                item.tech2,
+                                                item.tech3,
+                                                item.tech4,
+                                                item.tech5,
+                                                item.tech6,
+                                                item.tech7,
+                                                item.tech8,
+                                                item.tech9,
+                                                item.tech10,
+                                                item.tech11,
+                                                item.tech12,
+                                            ].filter(Boolean)} // Filtrar las tecnologías para eliminar las que sean falsas (undefined, null, etc.)
+                                        />
+                                    )}
+                                </ImageContainer>
                             ))}
-                        </FullWidthCarousel>
-                    ) : (
-                        <FullWidthCarousel interval={8000}>
-                            {imagesGrouped.map((group, index) => (
-                                <ContainerProject key={index}>
-                                    {group.map((skill, skillIndex) => (
-                                        <div key={skillIndex}>
-                                            <ContainerProjectTitle>
-                                                <TitleProject>
-                                                    {skill.title}
-                                                </TitleProject>
-                                            </ContainerProjectTitle>
-                                            <ImgColombia
-                                                src={skill.img}
-                                                alt={skill.title}
-                                            />
-                                            <ContainerProjectDescription>
-                                                <ProjectDescription>
-                                                    <TechAccordion
-                                                        techs={[
-                                                            skill.tech,
-                                                            skill.tech1,
-                                                            skill.tech2,
-                                                            skill.tech3,
-                                                            skill.tech4,
-                                                            skill.tech5,
-                                                            skill.tech6,
-                                                            skill.tech7,
-                                                            skill.tech8,
-                                                            skill.tech9,
-                                                            skill.tech10,
-                                                            skill.tech11,
-                                                            skill.tech12,
-                                                            skill.tech13,
-                                                        ]}
-                                                    />
-                                                </ProjectDescription>
-                                            </ContainerProjectDescription>
-                                        </div>
-                                    ))}
-                                </ContainerProject>
-                            ))}
-                        </FullWidthCarousel>
-                    )}
-                </SkillsContainer>
-            </SkillsContainerAll>
-        </MainContainer>
-    );
-};
+                        </Container>
+                    ))}
+                </FullWidthCarousel>
+                )}
+            </Container>
+        </MainContainer >
+    )
+}
 
-export default memo(BootcampProjects);
+export default memo(BootcampProjects)
