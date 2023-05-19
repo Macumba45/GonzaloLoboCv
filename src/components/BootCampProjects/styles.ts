@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 import Carousel from 'react-material-ui-carousel'
 
-
-
 export const MainContainer = styled.div`
     width: 100%;
+    height: 100%;
     margin-top: 5rem;
-    height: 120vh;
     z-index: 9999;
     @media screen and (max-width: 600px) {
         height: 140vh;
@@ -46,10 +44,8 @@ export const Title = styled.h1`
 `
 
 export const SkillsContainerAll = styled.div`
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
     @media screen and (max-width: 600px) {
         flex-direction: column;
     }
@@ -57,13 +53,15 @@ export const SkillsContainerAll = styled.div`
 
 export const SkillsContainer = styled.div`
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    height: 1000px;
     line-height: 2.5rem;
     margin-bottom: 2rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
+
     margin-top: 3rem;
     @media screen and (max-width: 600px) {
+        flex-direction: column;
         margin-left: 0rem;
         margin-right: 0rem;
     }
@@ -82,7 +80,6 @@ export const SkillsContainerLogo = styled.div`
 
 export const ContainerProject = styled.div`
     display: flex;
-    flex-direction: column;
     justify-content: center;
     margin-bottom: 5rem;
     height: 50rem;
@@ -93,7 +90,7 @@ export const ContainerProjectTitle = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 2rem;
+    height: 5rem;
 `
 
 export const TitleProject = styled.p`

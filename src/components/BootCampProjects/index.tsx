@@ -15,13 +15,10 @@ import {
     ContainerProjectDescription,
     ImgTech,
     ContainerTech,
+    FullWidthCarousel,
 } from './styles'
 
-import {
-    Accordion,
-    AccordionDetails,
-    Button,
-} from '@mui/material'
+import { Accordion, AccordionDetails, Button } from '@mui/material'
 
 const paul = require('../../assets/templates/PAUL.png')
 const brenes = require('../../assets/templates/BRENES.png')
@@ -44,19 +41,15 @@ const mui = require('../../assets/skills/mui.png')
 const node = require('../../assets/skills/node1.png')
 const postgres = require('../../assets/skills/postgres.png')
 
-interface Skills {
-    [key: string]: any
-}
-
-const skills: Skills = {
-    paul: {
+const skills = [
+    {
         img: paul,
         title: 'Project I',
         description: 'Project developed using HTML & CSS',
         tech: html,
         tech1: css,
     },
-    brenes: {
+    {
         img: brenes,
         title: 'Project II',
         description: 'Project developed using JavaScript Vanilla',
@@ -65,7 +58,7 @@ const skills: Skills = {
         tech2: javas,
         tech3: firebase,
     },
-    nasa: {
+    {
         img: nasa,
         title: 'Project III',
         description:
@@ -82,7 +75,7 @@ const skills: Skills = {
         tech9: node,
         tech10: postgres,
     },
-    rick: {
+    {
         img: rick,
         title: 'Project IV',
         description: 'Backend',
@@ -98,7 +91,7 @@ const skills: Skills = {
         tech9: node,
         tech10: postgres,
     },
-    cocktails: {
+    {
         img: cocktails,
         title: 'Project V',
         description: 'Backend',
@@ -117,7 +110,7 @@ const skills: Skills = {
         tech12: node,
         tech13: postgres,
     },
-    inversor: {
+    {
         img: inversor,
         title: 'Project VI',
         description: 'Backend',
@@ -136,12 +129,11 @@ const skills: Skills = {
         tech12: node,
         tech13: postgres,
     },
-}
+]
 
 const TechAccordion = ({ techs }: any) => {
     const [expanded, setExpanded] = useState(false)
     const [isMobile, setIsMobile] = useState(false)
-
 
     const handleAccordionChange = () => {
         setExpanded(!expanded)
@@ -159,7 +151,7 @@ const TechAccordion = ({ techs }: any) => {
         <Accordion
             sx={{
                 backgroundColor: '#a2a2a2',
-                width: '280px',
+                width: '230px',
                 display: 'flex',
                 flexDirection: 'column',
                 margin: '0 auto',
@@ -171,9 +163,11 @@ const TechAccordion = ({ techs }: any) => {
                 sx={{
                     backgroundColor: 'black',
                     '&:hover': {
-                        backgroundColor: 'black', // Cambia este valor por el color deseado
+                        backgroundColor: 'yellow',
+                        color: "black "// Cambia este valor por el color deseado
                     },
-                }} variant="contained"
+                }}
+                variant="contained"
                 onClick={handleAccordionChange}
             >
                 Techs used
@@ -190,6 +184,19 @@ const TechAccordion = ({ techs }: any) => {
 }
 
 const BootcampProjects: FC = () => {
+    const imagesGrouped = chunk(skills, 3); // Agrupamos los elementos en sub-arreglos de tres
+    const imagesGroupedMobile = chunk(skills, 1);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        handleResize(); // inicializa el estado en función del ancho actual
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <MainContainer>
             <TitleContainer>
@@ -197,47 +204,95 @@ const BootcampProjects: FC = () => {
             </TitleContainer>
             <SkillsContainerAll>
                 <SkillsContainer>
-                    <SkillsContainerLogo>
-                        {Object.keys(skills).map((skill, index) => (
-                            <ContainerProject key={index}>
-                                <ContainerProjectTitle>
-                                    <TitleProject>
-                                        {skills[skill].title}
-                                    </TitleProject>
-                                </ContainerProjectTitle>
-                                <ImgColombia
-                                    src={skills[skill].img}
-                                    alt={skill}
-                                />
-                                <ContainerProjectDescription>
-                                    <ProjectDescription>
-                                        <TechAccordion
-                                            techs={[
-                                                skills[skill].tech,
-                                                skills[skill].tech1,
-                                                skills[skill].tech2,
-                                                skills[skill].tech3,
-                                                skills[skill].tech4,
-                                                skills[skill].tech5,
-                                                skills[skill].tech6,
-                                                skills[skill].tech7,
-                                                skills[skill].tech8,
-                                                skills[skill].tech9,
-                                                skills[skill].tech10,
-                                                skills[skill].tech11,
-                                                skills[skill].tech12,
-                                                skills[skill].tech13,
-                                            ]}
-                                        />
-                                    </ProjectDescription>
-                                </ContainerProjectDescription>
-                            </ContainerProject>
-                        ))}
-                    </SkillsContainerLogo>
+                    {isMobile ? (
+                        <FullWidthCarousel interval={8000}>
+                            {imagesGroupedMobile.map((group, index) => (
+                                <ContainerProject key={index}>
+                                    {group.map((skill, skillIndex) => (
+                                        <div key={skillIndex}>
+                                            <ContainerProjectTitle>
+                                                <TitleProject>
+                                                    {skill.title}
+                                                </TitleProject>
+                                            </ContainerProjectTitle>
+                                            <ImgColombia
+                                                src={skill.img}
+                                                alt={skill.title}
+                                            />
+                                            <ContainerProjectDescription>
+                                                <ProjectDescription>
+                                                    <TechAccordion
+                                                        techs={[
+                                                            skill.tech,
+                                                            skill.tech1,
+                                                            skill.tech2,
+                                                            skill.tech3,
+                                                            skill.tech4,
+                                                            skill.tech5,
+                                                            skill.tech6,
+                                                            skill.tech7,
+                                                            skill.tech8,
+                                                            skill.tech9,
+                                                            skill.tech10,
+                                                            skill.tech11,
+                                                            skill.tech12,
+                                                            skill.tech13,
+                                                        ]}
+                                                    />
+                                                </ProjectDescription>
+                                            </ContainerProjectDescription>
+                                        </div>
+                                    ))}
+                                </ContainerProject>
+                            ))}
+                        </FullWidthCarousel>
+                    ) : (
+                        <FullWidthCarousel interval={8000}>
+                            {imagesGrouped.map((group, index) => (
+                                <ContainerProject key={index}>
+                                    {group.map((skill, skillIndex) => (
+                                        <div key={skillIndex}>
+                                            <ContainerProjectTitle>
+                                                <TitleProject>
+                                                    {skill.title}
+                                                </TitleProject>
+                                            </ContainerProjectTitle>
+                                            <ImgColombia
+                                                src={skill.img}
+                                                alt={skill.title}
+                                            />
+                                            <ContainerProjectDescription>
+                                                <ProjectDescription>
+                                                    <TechAccordion
+                                                        techs={[
+                                                            skill.tech,
+                                                            skill.tech1,
+                                                            skill.tech2,
+                                                            skill.tech3,
+                                                            skill.tech4,
+                                                            skill.tech5,
+                                                            skill.tech6,
+                                                            skill.tech7,
+                                                            skill.tech8,
+                                                            skill.tech9,
+                                                            skill.tech10,
+                                                            skill.tech11,
+                                                            skill.tech12,
+                                                            skill.tech13,
+                                                        ]}
+                                                    />
+                                                </ProjectDescription>
+                                            </ContainerProjectDescription>
+                                        </div>
+                                    ))}
+                                </ContainerProject>
+                            ))}
+                        </FullWidthCarousel>
+                    )}
                 </SkillsContainer>
             </SkillsContainerAll>
         </MainContainer>
-    )
-}
+    );
+};
 
-export default memo(BootcampProjects)
+export default memo(BootcampProjects);
