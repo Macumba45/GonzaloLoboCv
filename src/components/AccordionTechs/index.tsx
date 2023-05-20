@@ -2,8 +2,6 @@ import { Accordion, AccordionDetails, Button } from '@mui/material'
 import { useState } from 'react'
 import { ImgTech } from './styles'
 
-
-
 const TechAccordion = ({ techs }: any) => {
     const [expanded, setExpanded] = useState(false)
 
@@ -37,12 +35,14 @@ const TechAccordion = ({ techs }: any) => {
                 Techs used
             </Button>
             <AccordionDetails>
-                <div style={{
-                    justifyContent: 'center',
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    height: '100%',
-                }}>
+                <div
+                    style={{
+                        justifyContent: 'center',
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        height: '100%',
+                    }}
+                >
                     {techs.map((tech: any, index: any) => (
                         <ImgTech key={index} src={tech} />
                     ))}

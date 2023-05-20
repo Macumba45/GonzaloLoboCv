@@ -7,7 +7,6 @@ export const MainContainer = styled.div`
     justify-content: center;
     width: 100%;
     height: 100vh;
-    z-index: 9999;
     @media screen and (max-width: 600px) {
         height: 140vh;
     }

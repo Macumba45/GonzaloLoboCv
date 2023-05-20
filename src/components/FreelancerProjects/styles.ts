@@ -5,11 +5,10 @@ export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
+    margin-bottom: 5rem;
     width: 100%;
     z-index: 9999;
-    height: 1100px;
     @media screen and (max-width: 600px) {
-        height: 1200px;
     }
 `
 
@@ -17,38 +16,25 @@ export const ImageContainer = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-top: 5rem;
 
 `;
 
 export const Container = styled.div`
-    display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    height: 800px;
     @media screen and (max-width: 600px) {
    
 
     }
 `
-
-export const FullWidthCarousel = styled(Carousel)`
-    width: 100%;
-    height: 1500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-
-`
-
 export const TitleContainer = styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
     margin-top: 3rem;
-    margin-bottom: 3rem;
 `
 
 export const Title = styled.h1`
@@ -60,12 +46,13 @@ export const Title = styled.h1`
 `
 
 export const ImgColombia = styled.img`
-    width: 20rem;
-    height: auto;
+    width: 90rem;
     margin-left: 2rem;
     margin-right: 2rem;
     @media screen and (max-width: 600px) {
-        width: 20rem;
+        width: 30rem;
+        height:100% ;
+
     }
 `
 
@@ -75,3 +62,6 @@ export const SpanBold = styled.span`
     color: black;
     font-weight: 700;
 `
+
+
+

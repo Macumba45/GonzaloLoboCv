@@ -1,4 +1,5 @@
 import { FC, memo, useEffect, useState } from 'react'
+import TechAccordion from '../AccordionTechs'
 import { chunk } from 'lodash'
 import {
     MainContainer,
@@ -9,9 +10,6 @@ import {
     Container,
     ImageContainer,
 } from './styles'
-import { Button } from '@mui/material'
-import TechAccordion from '../AccordionTechs'
-
 
 const paul = require('../../assets/templates/PAUL.png')
 const brenes = require('../../assets/templates/BRENES.png')
@@ -66,7 +64,6 @@ const projects = [
         tech7: mongo,
         tech8: styled,
         tech9: node,
-
     },
     {
         img: rick,
@@ -121,8 +118,6 @@ const projects = [
     },
 ]
 
-
-
 const BootcampProjects: FC = () => {
     const imagesGrouped = chunk(projects, 3) // Agrupamos los elementos en sub-arreglos de tres
     const imagesGroupedMobile = chunk(projects, 1)
@@ -144,12 +139,20 @@ const BootcampProjects: FC = () => {
             </TitleContainer>
             <Container>
                 {isMobile ? (
-                    <FullWidthCarousel interval={5000}>
+                    <FullWidthCarousel
+                        interval={5000}
+                        animation={'fade'}
+                        swipe={false}
+                        navButtonsAlwaysVisible={true}
+                        cycleNavigation={true}
+                    >
                         {imagesGroupedMobile.map((group, index) => (
                             <Container key={index}>
                                 {group.map((item, subIndex) => (
                                     <ImageContainer key={subIndex}>
-                                        {item.img && <ImgColombia src={item.img} />}
+                                        {item.img && (
+                                            <ImgColombia src={item.img} />
+                                        )}
                                         {item.img && (
                                             <TechAccordion
                                                 techs={[
@@ -174,39 +177,49 @@ const BootcampProjects: FC = () => {
                             </Container>
                         ))}
                     </FullWidthCarousel>
-                ) : (<FullWidthCarousel interval={5000}>
-                    {imagesGrouped.map((group, index) => (
-                        <Container key={index}>
-                            {group.map((item, subIndex) => (
-                                <ImageContainer key={subIndex}>
-                                    {item.img && <ImgColombia src={item.img} />}
-                                    {item.img && (
-                                        <TechAccordion
-                                            techs={[
-                                                item.tech,
-                                                item.tech1,
-                                                item.tech2,
-                                                item.tech3,
-                                                item.tech4,
-                                                item.tech5,
-                                                item.tech6,
-                                                item.tech7,
-                                                item.tech8,
-                                                item.tech9,
-                                                item.tech10,
-                                                item.tech11,
-                                                item.tech12,
-                                            ].filter(Boolean)} // Filtrar las tecnologías para eliminar las que sean falsas (undefined, null, etc.)
-                                        />
-                                    )}
-                                </ImageContainer>
-                            ))}
-                        </Container>
-                    ))}
-                </FullWidthCarousel>
+                ) : (
+                    <FullWidthCarousel
+                        interval={5000}
+                        animation={'fade'}
+                        swipe={false}
+                        navButtonsAlwaysVisible={true}
+                        cycleNavigation={true}
+
+                    >
+                        {imagesGrouped.map((group, index) => (
+                            <Container key={index}>
+                                {group.map((item, subIndex) => (
+                                    <ImageContainer key={subIndex}>
+                                        {item.img && (
+                                            <ImgColombia src={item.img} />
+                                        )}
+                                        {item.img && (
+                                            <TechAccordion
+                                                techs={[
+                                                    item.tech,
+                                                    item.tech1,
+                                                    item.tech2,
+                                                    item.tech3,
+                                                    item.tech4,
+                                                    item.tech5,
+                                                    item.tech6,
+                                                    item.tech7,
+                                                    item.tech8,
+                                                    item.tech9,
+                                                    item.tech10,
+                                                    item.tech11,
+                                                    item.tech12,
+                                                ].filter(Boolean)} // Filtrar las tecnologías para eliminar las que sean falsas (undefined, null, etc.)
+                                            />
+                                        )}
+                                    </ImageContainer>
+                                ))}
+                            </Container>
+                        ))}
+                    </FullWidthCarousel>
                 )}
             </Container>
-        </MainContainer >
+        </MainContainer>
     )
 }
 
