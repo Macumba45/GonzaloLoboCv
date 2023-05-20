@@ -1,7 +1,4 @@
-
 import { FC, memo, useEffect, useState } from 'react'
-import TechAccordion from '../AccordionTechs'
-import { chunk } from 'lodash'
 import {
     MainContainer,
     Title,
@@ -12,10 +9,7 @@ import {
 } from './styles'
 import Carousel from 'react-material-ui-carousel'
 
-
 const FreelanceProjects: FC = () => {
-
-
     const growthBooster = require('../../assets/macbook/growth.png')
     const toscana = require('../../assets/macbook/toscana.png')
     const inch = require('../../assets/macbook/9inch.png')
@@ -35,7 +29,6 @@ const FreelanceProjects: FC = () => {
     const mui = require('../../assets/skills/mui.png')
     const node = require('../../assets/skills/node1.png')
     const postgres = require('../../assets/skills/postgres.png')
-
 
     const projects: any = [
         {
@@ -105,7 +98,6 @@ const FreelanceProjects: FC = () => {
         },
     ]
     //const imagesGrouped = chunk(projects, 3) // Agrupamos los elementos en sub-arreglos de tres
-    const imagesGroupedMobile = chunk(projects, 1)
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
@@ -125,15 +117,23 @@ const FreelanceProjects: FC = () => {
                 </TitleContainer>
                 <Container>
                     <Carousel
-                        interval={5000}
+                        interval={4000}
                         navButtonsAlwaysVisible={true}
                         indicators={false}
                         index={1}
-                        height={500}
                         fullHeightHover={true}
                         cycleNavigation={true}
-                        animation='slide'
-                        sx={{ width: '100%', display: 'flex', justifyContent: 'center', flexDirection: 'column' }}
+                        animation="slide"
+                        sx={{
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            flexDirection: 'column',
+                            ...(isMobile && {
+
+                                height: '400px ',
+                            }),
+                        }}
                         navButtonsWrapperProps={{
                             style: {
                                 marginRight: '100px',
@@ -143,14 +143,12 @@ const FreelanceProjects: FC = () => {
                                     // marginRight: '120px',
                                     // marginLeft: '120px',
                                     // marginTop: '10px',
-                                    top: '130px',
-
-
+                                    top: '-60px',
 
                                     // Estilos específicos para pantallas menores de 600px
                                     // Agrega aquí las propiedades específicas para pantallas móviles
                                 }),
-                            }
+                            },
                         }}
                         navButtonsProps={{
                             style: {

@@ -184,7 +184,12 @@ const BootcampProjects: FC = () => {
                         swipe={false}
                         navButtonsAlwaysVisible={true}
                         cycleNavigation={true}
-
+                        navButtonsWrapperProps={{
+                            style: {
+                                marginRight: '100px',
+                                marginLeft: '100px',
+                            },
+                        }}
                     >
                         {imagesGrouped.map((group, index) => (
                             <Container key={index}>

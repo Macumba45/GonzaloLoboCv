@@ -1,11 +1,10 @@
 import styled from 'styled-components'
-import Carousel from 'react-material-ui-carousel'
 
 export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
     width: 100%;
     z-index: 9999;
     @media screen and (max-width: 600px) {
@@ -13,20 +12,17 @@ export const MainContainer = styled.div`
 `
 
 export const ImageContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 5rem;
-
-`;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+`
 
 export const Container = styled.div`
     width: 100%;
     justify-content: center;
     align-items: center;
     @media screen and (max-width: 600px) {
-   
-
     }
 `
 export const TitleContainer = styled.div`
@@ -51,17 +47,11 @@ export const ImgColombia = styled.img`
     margin-right: 2rem;
     @media screen and (max-width: 600px) {
         width: 30rem;
-        height:100% ;
-
     }
 `
-
 
 export const SpanBold = styled.span`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-weight: 700;
 `
-
-
-

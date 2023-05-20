@@ -14,11 +14,10 @@ export const MainContainer = styled.div`
 `
 
 export const ImageContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-
-`;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
 
 export const Container = styled.div`
     display: flex;
@@ -26,8 +25,6 @@ export const Container = styled.div`
     align-items: center;
     height: 800px;
     @media screen and (max-width: 600px) {
-   
-
     }
 `
 
@@ -39,7 +36,6 @@ export const FullWidthCarousel = styled(Carousel)`
     justify-content: center;
     margin: 0;
     padding: 0;
-
 `
 
 export const TitleContainer = styled.div`
@@ -68,7 +64,6 @@ export const ImgColombia = styled.img`
         width: 20rem;
     }
 `
-
 
 export const SpanBold = styled.span`
     font-family: ${({ theme }) => theme.fonts.poppins};
