@@ -56,7 +56,7 @@ const SkillsComp: FC = () => {
                 <SkillsContainer>
                     <SkillsContainerLogo>
                         {Object.keys(skills).map((skill, index) => (
-                            <HoverMotion>
+                            <HoverMotion key={index}>
                                 <ImgColombia
                                     key={index}
                                     src={skills[skill]}

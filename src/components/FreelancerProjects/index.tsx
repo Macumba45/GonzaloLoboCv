@@ -105,7 +105,7 @@ const FreelanceProjects: FC = () => {
                             <ImageContainer key={index}>
                                 <HoverMotion>
 
-                                    <a target="blank" href={item.link}>
+                                    <a key={index} target="blank" href={item.link}>
                                         <ImgColombia src={item.img} />
                                     </a>
                                 </HoverMotion>
