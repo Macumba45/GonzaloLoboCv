@@ -83,9 +83,8 @@ const FreelanceProjects: FC = () => {
                                 top: '100px',
                                 ...(isMobile && {
                                     position: 'absolute',
-                                    // marginRight: '120px',
-                                    // marginLeft: '120px',
-                                    // marginTop: '10px',
+                                    marginRight: '120px',
+                                    marginLeft: '120px',
                                     top: '-60px',
 
                                     // Estilos específicos para pantallas menores de 600px
