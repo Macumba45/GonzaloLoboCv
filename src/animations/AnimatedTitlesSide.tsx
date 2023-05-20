@@ -10,17 +10,12 @@ type AnimatedComponentProps = MotionProps & {
     element?: ElementType
 }
 
-const AnimatedTitle: FC<AnimatedComponentProps> = ({ children }) => {
+const AnimatedSideTitle: FC<AnimatedComponentProps> = ({ children }) => {
     return (
         <motion.div
-            className="titleHeader"
-            initial={{ x: 0, opacity: 0 }}
             animate={{
                 opacity: 1,
-                x: [
-                    0, 5, 0, -5, 0, 0, 5, 0, -5, 0, 0, 5, 0, -5, 0, 0,
-                    5, 0, -5, 0, 0, 5, 0, -5, 0, 0, 5, 0, -5, 0, 0, 5,
-                    0, -5, 0, 0, 5, 0, -5, 0,
+                x: [-1000, 0, 100, 0
                 ],
             }}
             transition={{ duration: 1, delay: 1, easing: 'easeOut' }}
@@ -30,4 +25,4 @@ const AnimatedTitle: FC<AnimatedComponentProps> = ({ children }) => {
     )
 }
 
-export default memo(AnimatedTitle)
+export default memo(AnimatedSideTitle)

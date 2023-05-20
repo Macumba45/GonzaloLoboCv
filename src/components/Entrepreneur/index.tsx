@@ -12,6 +12,7 @@ import {
     EntrepreContainerLogo,
     FlagColombia,
 } from './styles'
+import HoverMotion from '../../animations/hover'
 
 const colombia = require('../../assets/colombia.png')
 const azcatec = require('../../assets/exit.jpeg')
@@ -20,43 +21,49 @@ const ramirez = require('../../assets/nafas.jpeg')
 
 const EntrepreneurComp: FC = () => {
     return (
-        <MainContainer>
+        <MainContainer id="entrepreneurship" className='entrepreneurship'>
             <TitleContainer>
                 <Title>Entrepreneur</Title>
             </TitleContainer>
 
             <EntrepreContainerAll>
-                <EntrepreContainer>
-                    <EntrepreContainerLogo>
-                        <ImgColombia src={myhixel} />
-                    </EntrepreContainerLogo>
-                    <EntrepreTitle>
-                        2NAIT APP
-                        <EntrepreSubTitle>CEO & Co-founder</EntrepreSubTitle>
-                        <EntrepreDate>(2015 - 2018)</EntrepreDate>
-                    </EntrepreTitle>
-                </EntrepreContainer>
-                <EntrepreContainer>
-                    <EntrepreContainerLogo>
-                        <ImgColombia src={azcatec} />
-                    </EntrepreContainerLogo>
-                    <EntrepreTitle>
-                        EXIT APP <FlagColombia src={colombia} />
-                        <EntrepreSubTitle>Co-founder</EntrepreSubTitle>
-                        <EntrepreDate>(2017 - 2018)</EntrepreDate>
-                    </EntrepreTitle>
-                </EntrepreContainer>
-                <EntrepreContainer>
-                    <EntrepreContainerLogo>
-                        <ImgColombia src={ramirez} />
-                    </EntrepreContainerLogo>
+                <HoverMotion>
+                    <EntrepreContainer>
+                        <EntrepreContainerLogo>
+                            <ImgColombia src={myhixel} />
+                        </EntrepreContainerLogo>
+                        <EntrepreTitle>
+                            2NAIT APP
+                            <EntrepreSubTitle>CEO & Co-founder</EntrepreSubTitle>
+                            <EntrepreDate>(2015 - 2018)</EntrepreDate>
+                        </EntrepreTitle>
+                    </EntrepreContainer>
+                </HoverMotion>
+                <HoverMotion>
+                    <EntrepreContainer>
+                        <EntrepreContainerLogo>
+                            <ImgColombia src={azcatec} />
+                        </EntrepreContainerLogo>
+                        <EntrepreTitle>
+                            EXIT APP <FlagColombia src={colombia} />
+                            <EntrepreSubTitle>Co-founder</EntrepreSubTitle>
+                            <EntrepreDate>(2017 - 2018)</EntrepreDate>
+                        </EntrepreTitle>
+                    </EntrepreContainer>
+                </HoverMotion>
+                <HoverMotion>
+                    <EntrepreContainer>
+                        <EntrepreContainerLogo>
+                            <ImgColombia src={ramirez} />
+                        </EntrepreContainerLogo>
 
-                    <EntrepreTitle>
-                        NAFAS - Sishas <FlagColombia src={colombia} />
-                        <EntrepreSubTitle>Co-founder</EntrepreSubTitle>
-                        <EntrepreDate>(2019 - 2020)</EntrepreDate>
-                    </EntrepreTitle>
-                </EntrepreContainer>
+                        <EntrepreTitle>
+                            NAFAS - Sishas <FlagColombia src={colombia} />
+                            <EntrepreSubTitle>Co-founder</EntrepreSubTitle>
+                            <EntrepreDate>(2019 - 2020)</EntrepreDate>
+                        </EntrepreTitle>
+                    </EntrepreContainer>
+                </HoverMotion>
             </EntrepreContainerAll>
         </MainContainer>
     )

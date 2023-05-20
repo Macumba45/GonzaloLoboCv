@@ -13,7 +13,7 @@ type AnimatedComponentProps = MotionProps & {
 
 const AnimatedView: FC<AnimatedComponentProps> = ({ children }) => {
     const { ref, inView } = useInView({
-        threshold: 0.1,
+        threshold: 0.2,
         triggerOnce: true,
     })
 

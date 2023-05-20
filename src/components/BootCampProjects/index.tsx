@@ -10,6 +10,7 @@ import {
     Container,
     ImageContainer,
 } from './styles'
+import HoverMotion from '../../animations/hover'
 
 const paul = require('../../assets/templates/PAUL.png')
 const brenes = require('../../assets/templates/BRENES.png')
@@ -36,6 +37,7 @@ const projects = [
     {
         img: paul,
         title: 'Project I',
+        link: 'https://github.com/Macumba45?tab=repositories',
         description: 'Project developed using HTML & CSS',
         tech: html,
         tech1: css,
@@ -43,6 +45,7 @@ const projects = [
     {
         img: brenes,
         title: 'Project II',
+        link: 'https://github.com/Macumba45?tab=repositories',
         description: 'Project developed using JavaScript Vanilla',
         tech: html,
         tech1: css,
@@ -52,6 +55,7 @@ const projects = [
     {
         img: nasa,
         title: 'Project III',
+        link: 'https://github.com/Macumba45?tab=repositories',
         description:
             'Project developed using React, Styled-Components, NodeJS, and PostgreSQL',
         tech: html,
@@ -68,6 +72,7 @@ const projects = [
     {
         img: rick,
         title: 'Project IV',
+        link: 'https://github.com/Macumba45?tab=repositories',
         description: 'Backend',
         tech: html,
         tech1: css,
@@ -83,6 +88,7 @@ const projects = [
     {
         img: cocktails,
         title: 'Project V',
+        link: 'https://github.com/Macumba45?tab=repositories',
         description: 'Backend',
         tech: html,
         tech1: css,
@@ -101,6 +107,7 @@ const projects = [
     {
         img: inversor,
         title: 'Project VI',
+        link: 'https://github.com/Macumba45?tab=repositories',
         description: 'Backend',
         tech: html,
         tech1: css,
@@ -133,7 +140,7 @@ const BootcampProjects: FC = () => {
     }, [])
 
     return (
-        <MainContainer>
+        <MainContainer id="bootcamp-projects" className='bootcamp-projects'>
             <TitleContainer>
                 <Title>BootCamp Projects</Title>
             </TitleContainer>
@@ -151,7 +158,9 @@ const BootcampProjects: FC = () => {
                                 {group.map((item, subIndex) => (
                                     <ImageContainer key={subIndex}>
                                         {item.img && (
-                                            <ImgColombia src={item.img} />
+                                            <a target="blank" href={item.link}>
+                                                <ImgColombia src={item.img} />
+                                            </a>
                                         )}
                                         {item.img && (
                                             <TechAccordion
@@ -178,12 +187,20 @@ const BootcampProjects: FC = () => {
                         ))}
                     </FullWidthCarousel>
                 ) : (
+
                     <FullWidthCarousel
                         interval={5000}
                         animation={'fade'}
                         swipe={false}
                         navButtonsAlwaysVisible={true}
                         cycleNavigation={true}
+                        navButtonsProps={{
+                            style: {
+                                // Estilos adicionales para los botones (next y prev)
+                                backgroundColor: 'rgba(0, 0, 0, 0.824)', // Ejemplo de fondo transparente
+                                // Añade otros estilos según tus necesidades
+                            },
+                        }}
                         navButtonsWrapperProps={{
                             style: {
                                 marginRight: '100px',
@@ -196,7 +213,12 @@ const BootcampProjects: FC = () => {
                                 {group.map((item, subIndex) => (
                                     <ImageContainer key={subIndex}>
                                         {item.img && (
-                                            <ImgColombia src={item.img} />
+                                            <HoverMotion>
+
+                                                <a target="blank" href={item.link}>
+                                                    <ImgColombia src={item.img} />
+                                                </a>
+                                            </HoverMotion>
                                         )}
                                         {item.img && (
                                             <TechAccordion

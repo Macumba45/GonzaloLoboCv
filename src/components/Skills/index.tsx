@@ -8,6 +8,7 @@ import {
     ImgColombia,
     SkillsContainerLogo,
 } from './styles'
+import HoverMotion from '../../animations/hover'
 
 const html = require('../../assets/skills/html.png')
 const css = require('../../assets/skills/css.png')
@@ -47,7 +48,7 @@ const skills: Skills = {
 
 const SkillsComp: FC = () => {
     return (
-        <MainContainer>
+        <MainContainer id="skills" className='skills'>
             <TitleContainer>
                 <Title>Skills</Title>
             </TitleContainer>
@@ -55,11 +56,13 @@ const SkillsComp: FC = () => {
                 <SkillsContainer>
                     <SkillsContainerLogo>
                         {Object.keys(skills).map((skill, index) => (
-                            <ImgColombia
-                                key={index}
-                                src={skills[skill]}
-                                alt={skill}
-                            />
+                            <HoverMotion>
+                                <ImgColombia
+                                    key={index}
+                                    src={skills[skill]}
+                                    alt={skill}
+                                />
+                            </HoverMotion>
                         ))}
                     </SkillsContainerLogo>
                 </SkillsContainer>

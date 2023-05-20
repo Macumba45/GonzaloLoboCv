@@ -3,10 +3,8 @@ import styled from 'styled-components'
 export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 110vh;
+    height: 125vh;
     z-index: 9999;
     @media screen and (max-width: 600px) {
         height: 100vh;
@@ -60,4 +58,9 @@ export const StudiesTitles = styled.h3`
     margin-left: 1rem;
     text-align: center;
     font-weight: 300;
+`
+export const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
 `

@@ -9,26 +9,49 @@ import EntrepreneurComp from '../../components/Entrepreneur'
 import SkillsComp from '../../components/Skills'
 import BootcampProjects from '../../components/BootCampProjects'
 import FreelanceProjects from '../../components/FreelancerProjects'
+import SoftSkills from '../../components/SoftSkills'
+import AnimatedView from '../../animations/AnimatedContainer'
 
 const Landing: FC = () => {
     return (
         <>
-            <NavBar />
-            <MySelfComp />
+            <AnimatedView>
+                <NavBar />
+                <MySelfComp />
+            </AnimatedView>
             <DividerWithChip label="Know me more" />
-            <WhoIAmComp />
+            <AnimatedView>
+                <WhoIAmComp />
+            </AnimatedView>
             <DividerWithChip label="My Education" />
-            <EducationComp />
+            <AnimatedView>
+                <EducationComp />
+            </AnimatedView>
             <DividerWithChip label="Work Experiences" />
-            <WorkComp />
+            <AnimatedView>
+                <WorkComp />
+            </AnimatedView>
             <DividerWithChip label="Entrepreneurship" />
-            <EntrepreneurComp />
+            <AnimatedView>
+                <EntrepreneurComp />
+            </AnimatedView>
             <DividerWithChip label="Skills" />
-            <SkillsComp />
+            <AnimatedView>
+                <SkillsComp />
+            </AnimatedView>
+            <DividerWithChip label="Soft Skills" />
+            <AnimatedView>
+                <SoftSkills />
+            </AnimatedView>
             <DividerWithChip label="BootCamp Projects" />
-            <BootcampProjects />
+            <AnimatedView>
+                <BootcampProjects />
+            </AnimatedView>
             <DividerWithChip label="Freelancer Projects" />
-            <FreelanceProjects />
+            <AnimatedView>
+                <FreelanceProjects />
+            </AnimatedView>
+
         </>
     )
 }
