@@ -21,7 +21,7 @@ const WorkComp: FC = () => {
     return (
         <MainContainer id="work-experiences" className='work-experiences'>
             <TitleContainer>
-                <Title>Work Experiences</Title>
+                <Title>Job Experiences</Title>
             </TitleContainer>
 
             <WorkContainerAll>
