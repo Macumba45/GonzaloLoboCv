@@ -1,7 +1,6 @@
 import { FC, memo } from 'react'
 import { Button } from '@mui/material'
 import { Props } from './type'
-import { Link } from 'react-scroll'
 import HoverMotion from '../../animations/hover'
 import { motion } from 'framer-motion'
 

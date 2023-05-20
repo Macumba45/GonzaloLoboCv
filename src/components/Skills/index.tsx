@@ -1,4 +1,7 @@
-import { FC, memo } from 'react'
+import { FC, memo, useEffect } from 'react'
+import HoverMotion from '../../animations/hover'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer';
 import {
     SkillsContainerAll,
     SkillsContainer,
@@ -8,7 +11,8 @@ import {
     ImgColombia,
     SkillsContainerLogo,
 } from './styles'
-import HoverMotion from '../../animations/hover'
+
+
 
 const html = require('../../assets/skills/html.png')
 const css = require('../../assets/skills/css.png')
@@ -47,6 +51,30 @@ const skills: Skills = {
 }
 
 const SkillsComp: FC = () => {
+
+    const controls = useAnimation();
+    const { ref, inView } = useInView({
+        threshold: 0.0,
+        triggerOnce: true,
+    })
+
+    const getRandomPosition = () => {
+        // Generate a random position within a range
+        const min = -700;
+        const max = 700;
+        return Math.random() * (max - min) + min;
+    };
+
+    useEffect(() => {
+        if (inView) {
+            controls.start({
+                opacity: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 2, type: 'spring', bounce: 0.2 }, // Personaliza la animación según tus necesidades
+            });
+        }
+    }, [controls, inView]);
     return (
         <MainContainer id="skills" className='skills'>
             <TitleContainer>
@@ -57,11 +85,18 @@ const SkillsComp: FC = () => {
                     <SkillsContainerLogo>
                         {Object.keys(skills).map((skill, index) => (
                             <HoverMotion key={index}>
-                                <ImgColombia
+                                <motion.div
                                     key={index}
-                                    src={skills[skill]}
-                                    alt={skill}
-                                />
+                                    ref={ref} // Aplica el ref del hook useInView a cada imagen
+                                    initial={{ opacity: 0, x: getRandomPosition(), y: getRandomPosition() }}
+                                    animate={controls}
+                                >
+                                    <ImgColombia
+                                        key={index}
+                                        src={skills[skill]}
+                                        alt={skill}
+                                    />
+                                </motion.div>
                             </HoverMotion>
                         ))}
                     </SkillsContainerLogo>
