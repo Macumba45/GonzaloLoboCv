@@ -1,6 +1,6 @@
 import { MotionProps, motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ElementType, FC, ReactNode, memo } from 'react'
+import { ElementType, FC, ReactNode, memo, useEffect, useState } from 'react'
 
 type AnimatedComponentChild = {
     element?: ElementType
@@ -12,9 +12,25 @@ type AnimatedComponentProps = MotionProps & {
 }
 
 const AnimatedView: FC<AnimatedComponentProps> = ({ children }) => {
+
+    const [isMobile, setIsMobile] = useState(false)
+    const threshold = isMobile ? 0.1 : 0.3;
+    const triggerOnce = true;
+
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768)
+        }
+        handleResize() // inicializa el estado en función del ancho actual
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
     const { ref, inView } = useInView({
-        threshold: 0.5,
-        triggerOnce: true,
+        threshold,
+        triggerOnce,
+
     })
 
     const containerVariants = {
@@ -43,6 +59,7 @@ const AnimatedView: FC<AnimatedComponentProps> = ({ children }) => {
 
     return (
         <motion.div
+
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
             exit="exit"

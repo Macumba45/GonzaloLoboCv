@@ -60,8 +60,8 @@ const SkillsComp: FC = () => {
 
     const getRandomPosition = () => {
         // Generate a random position within a range
-        const min = -700;
-        const max = 700;
+        const min = 0;
+        const max = -100;
         return Math.random() * (max - min) + min;
     };
 
@@ -71,7 +71,7 @@ const SkillsComp: FC = () => {
                 opacity: 1,
                 x: 0,
                 y: 0,
-                transition: { duration: 2, type: 'spring', bounce: 0.2 }, // Personaliza la animación según tus necesidades
+                transition: { duration: 1, type: 'spring', bounce: 0.2 }, // Personaliza la animación según tus necesidades
             });
         }
     }, [controls, inView]);
@@ -82,7 +82,7 @@ const SkillsComp: FC = () => {
             </TitleContainer>
             <SkillsContainerAll>
                 <SkillsContainer>
-                    <SkillsContainerLogo>
+                    <SkillsContainerLogo >
                         {Object.keys(skills).map((skill, index) => (
                             <HoverMotion key={index}>
                                 <motion.div

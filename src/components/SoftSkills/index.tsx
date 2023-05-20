@@ -28,8 +28,8 @@ const SoftSkills: FC = () => {
 
     const getRandomPosition = () => {
         // Generate a random position within a range
-        const min = -700;
-        const max = 700;
+        const min = 0;
+        const max = -100;
         return Math.random() * (max - min) + min;
     };
 
