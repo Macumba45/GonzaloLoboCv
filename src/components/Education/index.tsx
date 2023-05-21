@@ -33,7 +33,7 @@ const EducationComp: FC = () => {
                         <EducationTitle>
                             BootCamp {<br />} Full Stack Developer.
                             <EducationSubTitle>
-                                The Bridge School.
+                                The Bridge School. 360hr - Part Time
                             </EducationSubTitle>
                             <EducationDate>
                                 (October 2022 - April 2023)
@@ -45,7 +45,7 @@ const EducationComp: FC = () => {
                     <EducationContainer>
                         <WorkIcon sx={{ fontSize: '4rem', marginBottom: '2rem' }} />
                         <EducationTitle>
-                            International {<br />} Business & Trade.
+                            Master in International {<br />} Business & Trade.
                             <EducationSubTitle>
                                 Business School, ESIC
                             </EducationSubTitle>
@@ -61,7 +61,7 @@ const EducationComp: FC = () => {
                             sx={{ fontSize: '4rem', marginBottom: '2rem' }}
                         />
                         <EducationTitle>
-                            Graduate {<br />} Accounting & Finances.
+                            Grade in {<br />} Accounting & Finances.
                             <EducationSubTitle>
                                 Universidad de Sevilla & ICESI{' '}
                                 <ImgColombia src={colombia} />

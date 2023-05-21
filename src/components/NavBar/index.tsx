@@ -14,7 +14,7 @@ import HoverMotion from '../../animations/hover'
 
 const pages = [
     'Education',
-    'Work Experiences',
+    'Job Experiences',
     'Entrepreneurship',
     'Skills',
     'Soft Skills',
@@ -107,8 +107,8 @@ const NavBarComp: FC = () => {
                                                 to={page.toLowerCase().replace(' ', '-')}
                                                 spy={true}
                                                 smooth={true}
-                                                duration={500}
-                                                offset={-70}
+                                                duration={1500}
+                                                offset={-170}
                                                 onClick={handleCloseNavMenu}
                                             >
                                                 <Typography textAlign="center">{page}</Typography>

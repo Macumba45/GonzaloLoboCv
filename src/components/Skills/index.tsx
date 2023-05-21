@@ -71,18 +71,18 @@ const SkillsComp: FC = () => {
                 opacity: 1,
                 x: 0,
                 y: 0,
-                transition: { duration: 1, type: 'spring', bounce: 0.2 }, // Personaliza la animación según tus necesidades
+                transition: { duration: 4, type: 'spring', bounce: 0.2 }, // Personaliza la animación según tus necesidades
             });
         }
     }, [controls, inView]);
     return (
-        <MainContainer id="skills" className='skills'>
+        <MainContainer >
             <TitleContainer>
                 <Title>Skills</Title>
             </TitleContainer>
             <SkillsContainerAll>
                 <SkillsContainer>
-                    <SkillsContainerLogo >
+                    <SkillsContainerLogo id="skills" className='skills' >
                         {Object.keys(skills).map((skill, index) => (
                             <HoverMotion key={index}>
                                 <motion.div

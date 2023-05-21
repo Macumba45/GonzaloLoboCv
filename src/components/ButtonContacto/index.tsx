@@ -19,9 +19,8 @@ const ButtonContacto: FC<Props> = ({ title }) => {
                 <a style={{ textDecoration: 'none' }} href="mailto:gonzalolovo@gmail.com">
                     <Button
                         sx={{
-                            borderColor: '#FF9900',
                             color: '#ffffff',
-                            backgroundColor: '#021531',
+                            backgroundColor: '#000000',
                             marginBottom: '1rem',
                             marginRight: '1rem',
                             marginLeft: '1rem',

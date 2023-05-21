@@ -27,7 +27,7 @@ const Landing: FC = () => {
             <AnimatedView>
                 <EducationComp />
             </AnimatedView>
-            <DividerWithChip label="Work Experiences" />
+            <DividerWithChip label="Job Experiences" />
             <AnimatedView>
                 <WorkComp />
             </AnimatedView>

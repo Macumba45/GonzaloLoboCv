@@ -6,10 +6,10 @@ export const MainContainer = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 130vh;
+    height: 100vh;
     z-index: 9999;
     @media screen and (max-width: 600px) {
-        height: 140vh;
+        height: 100vh;
     }
 `
 
@@ -59,18 +59,20 @@ export const SkillsContainerLogo = styled.div`
     justify-content: center;
     align-items: center;
     @media screen and (max-width: 600px) {
-        width: 300px;
+        width: 350px;
     }
 `
 
 export const ImgColombia = styled.img`
-    width: 4rem;
+    width: 5rem;
     height: auto;
     margin-bottom: 3rem;
     margin-left: 2rem;
     margin-right: 2rem;
     @media screen and (max-width: 600px) {
-        width: 4rem;
+        width: 3rem;
+        margin-left: 1rem;
+    margin-right: 1rem;
     }
 `
 

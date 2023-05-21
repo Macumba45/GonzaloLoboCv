@@ -39,7 +39,7 @@ const SoftSkills: FC = () => {
                 opacity: 1,
                 x: 0,
                 y: 0,
-                transition: { duration: 2, type: 'spring', bounce: 0.2 }, // Personaliza la animación según tus necesidades
+                transition: { duration: 4, type: 'spring', bounce: 0.2 }, // Personaliza la animación según tus necesidades
             });
         }
     }, [controls, inView]);
@@ -57,7 +57,7 @@ const SoftSkills: FC = () => {
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
-                            <AccessTimeIcon sx={{ fontSize: '5rem' }} />
+                            <AccessTimeIcon sx={{ fontSize: '4rem' }} />
                             <SofSkillsDescription>Time Management</SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
@@ -69,7 +69,7 @@ const SoftSkills: FC = () => {
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
-                            <ConnectWithoutContactIcon sx={{ fontSize: '5rem' }} />
+                            <ConnectWithoutContactIcon sx={{ fontSize: '4rem' }} />
                             <SofSkillsDescription>Communication</SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
@@ -81,7 +81,7 @@ const SoftSkills: FC = () => {
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
-                            <AddReactionIcon sx={{ fontSize: '5rem' }} />
+                            <AddReactionIcon sx={{ fontSize: '4rem' }} />
                             <SofSkillsDescription>Adaptability</SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
@@ -93,7 +93,7 @@ const SoftSkills: FC = () => {
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
-                            <Diversity3Icon sx={{ fontSize: '5rem' }} />
+                            <Diversity3Icon sx={{ fontSize: '4rem' }} />
                             <SofSkillsDescription>Teamwork skills</SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
@@ -105,7 +105,7 @@ const SoftSkills: FC = () => {
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
-                            <EmojiObjectsIcon sx={{ fontSize: '5rem' }} />
+                            <EmojiObjectsIcon sx={{ fontSize: '4rem' }} />
                             <SofSkillsDescription>Problem-solving</SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
@@ -118,7 +118,7 @@ const SoftSkills: FC = () => {
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
-                            <FollowTheSignsIcon sx={{ fontSize: '5rem' }} />
+                            <FollowTheSignsIcon sx={{ fontSize: '4rem' }} />
                             <SofSkillsDescription>Leadership</SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
@@ -131,7 +131,7 @@ const SoftSkills: FC = () => {
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
-                            <ThumbUpAltIcon sx={{ fontSize: '5rem' }} />
+                            <ThumbUpAltIcon sx={{ fontSize: '4rem' }} />
                             <SofSkillsDescription>Interpersonal skills</SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
