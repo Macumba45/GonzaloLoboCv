@@ -6,7 +6,7 @@ export const MainContainer = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 1200px;
     @media screen and (max-width: 600px) {
         height: 140vh;
     }
@@ -32,6 +32,7 @@ export const Title = styled.h1`
 export const EntrepreContainerAll = styled.div`
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     @media screen and (max-width: 600px) {
         flex-direction: column;
     }

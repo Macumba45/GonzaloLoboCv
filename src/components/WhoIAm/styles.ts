@@ -6,7 +6,7 @@ export const MainContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 1100px;
     z-index: 9999;
 
     @media screen and (max-width: 600px) {
@@ -36,11 +36,15 @@ export const DescriptionContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-    width: 1100px;
+    width: 900px;
     text-align: center;
     margin-top: 2rem;
 
     @media screen and (max-width: 600px) {
+        width: 300px;
+    }
+
+    @media screen and (max-width: 800px) {
         width: 300px;
     }
 `
@@ -48,8 +52,11 @@ export const DescriptionContainer = styled.div`
 export const Description = styled.p`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
+    width: 100%;
     margin-bottom: 2rem;
     line-height: 2rem;
+    white-space: wrap;
+    
 `
 
 export const SpanBold = styled.span`

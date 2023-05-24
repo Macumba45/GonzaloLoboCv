@@ -9,7 +9,7 @@ export const MainContainer = styled.div`
     z-index: 9999;
     height: 1100px;
     @media screen and (max-width: 600px) {
-        height: 1200px;
+        height: 1100px;
     }
 `
 
@@ -21,6 +21,7 @@ export const ImageContainer = styled.div`
 
 export const Container = styled.div`
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     height: 800px;
@@ -30,7 +31,6 @@ export const Container = styled.div`
 
 export const FullWidthCarousel = styled(Carousel)`
     width: 100%;
-    height: 1500px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -3,11 +3,12 @@ import styled from 'styled-components'
 export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
+
     width: 100%;
-    height: 125vh;
+    height: 900px;
     z-index: 9999;
     @media screen and (max-width: 600px) {
-        height: 100vh;
+        height: 900px;
     }
 `
 

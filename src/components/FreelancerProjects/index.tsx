@@ -57,61 +57,62 @@ const FreelanceProjects: FC = () => {
                 <TitleContainer>
                     <Title>Freelancer Projects</Title>
                 </TitleContainer>
-                <Container>
-                    <Carousel
-                        interval={5000}
-                        navButtonsAlwaysVisible={true}
-                        indicators={false}
-                        index={1}
-                        fullHeightHover={true}
-                        cycleNavigation={true}
-                        animation="slide"
-                        sx={{
-                            width: '100%',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            flexDirection: 'column',
+
+                <Carousel
+                    interval={5000}
+                    navButtonsAlwaysVisible={true}
+                    indicators={false}
+                    index={1}
+                    fullHeightHover={true}
+                    cycleNavigation={true}
+                    animation="slide"
+                    sx={{
+                        width: '100%',
+                        height: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                        // ...(isMobile && {
+                        //     height: '800px ',
+                        // }),
+                    }}
+                    navButtonsWrapperProps={{
+                        style: {
+                            marginRight: '150px',
+                            marginLeft: '150px',
+                            position: 'absolute',
+                            top: '100px',
                             ...(isMobile && {
-                                height: '400px ',
-                            }),
-                        }}
-                        navButtonsWrapperProps={{
-                            style: {
-                                marginRight: '150px',
-                                marginLeft: '150px',
                                 position: 'absolute',
-                                top: '100px',
-                                ...(isMobile && {
-                                    position: 'absolute',
-                                    marginRight: '120px',
-                                    marginLeft: '120px',
-                                    top: '-60px',
+                                marginRight: '120px',
+                                marginLeft: '120px',
+                                top: '-60px',
 
-                                    // Estilos específicos para pantallas menores de 600px
-                                    // Agrega aquí las propiedades específicas para pantallas móviles
-                                }),
-                            },
-                        }}
-                        navButtonsProps={{
-                            style: {
-                                // Estilos adicionales para los botones (next y prev)
-                                backgroundColor: 'rgba(0, 0, 0, 0.824)', // Ejemplo de fondo transparente
-                                // Añade otros estilos según tus necesidades
-                            },
-                        }}
-                    >
-                        {projects.map((item: any, index: any) => (
-                            <ImageContainer key={index}>
-                                <HoverMotion>
+                                // Estilos específicos para pantallas menores de 600px
+                                // Agrega aquí las propiedades específicas para pantallas móviles
+                            }),
+                        },
+                    }}
+                    navButtonsProps={{
+                        style: {
+                            // Estilos adicionales para los botones (next y prev)
+                            backgroundColor: 'rgba(0, 0, 0, 0.824)', // Ejemplo de fondo transparente
+                            // Añade otros estilos según tus necesidades
+                        },
+                    }}
+                >
+                    {projects.map((item: any, index: any) => (
+                        <ImageContainer key={index}>
+                            <HoverMotion>
 
-                                    <a key={index} target="blank" href={item.link}>
-                                        <ImgColombia src={item.img} />
-                                    </a>
-                                </HoverMotion>
-                            </ImageContainer>
-                        ))}
-                    </Carousel>
-                </Container>
+                                <a key={index} target="blank" href={item.link}>
+                                    <ImgColombia src={item.img} />
+                                </a>
+                            </HoverMotion>
+                        </ImageContainer>
+                    ))}
+                </Carousel>
             </Container>
         </MainContainer>
     )

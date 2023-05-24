@@ -5,9 +5,12 @@ export const MainContainer = styled.div`
     flex-direction: column;
     margin-top: 5rem;
     margin-bottom: 10rem;
+    height: 1100px;
     width: 100%;
     z-index: 9999;
     @media screen and (max-width: 600px) {
+        height: 600px;
+
     }
 `
 
@@ -45,9 +48,15 @@ export const ImgColombia = styled.img`
     width: 90rem;
     margin-left: 2rem;
     margin-right: 2rem;
+
+     @media screen and (max-width: 800px) {
+        width: 40rem;
+    }
     @media screen and (max-width: 600px) {
         width: 30rem;
     }
+
+   
 `
 
 export const SpanBold = styled.span`
