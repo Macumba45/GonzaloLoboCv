@@ -36,7 +36,7 @@ export const NameContainer = styled.div`
 export const Name = styled.h1`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 600;
 `
 

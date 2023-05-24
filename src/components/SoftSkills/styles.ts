@@ -2,11 +2,14 @@ import styled from 'styled-components'
 
 export const MainContainer = styled.div`
     width: 100%;
-    height: 110vh;
+    height: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media screen and (max-width: 600px) {
+        height: 1000px;
+    }
 
 `
 
@@ -22,7 +25,7 @@ export const TitleContainer = styled.div`
 export const Title = styled.h1`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 600;
     text-align: center;
 `
