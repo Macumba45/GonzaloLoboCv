@@ -24,7 +24,7 @@ export const Container = styled.div`
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    /* height: 800px; */
     @media screen and (max-width: 600px) {
     }
 `
