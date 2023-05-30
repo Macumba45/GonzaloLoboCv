@@ -32,8 +32,12 @@ export const Title = styled.h1`
 
 export const SkillsContainer = styled.div`
     display: flex;
+    width: 1200px;
     justify-content: center;
     flex-wrap: wrap;
+    @media screen and (max-width: 600px) {
+        width: 360px;
+    }
 `
 
 export const SkillsContainerIndividual = styled.div`
