@@ -14,6 +14,7 @@ import HoverMotion from '../../animations/hover'
 import AnimatedSideTitle from '../../animations/AnimatedTitlesSide'
 import AnimatedSideTitle2 from '../../animations/AnimatedTitlesSide2'
 import ButtonContacto from '../ButtonContacto'
+import ButtonCV from '../ButtonCV'
 const picture = require('../../assets/yo1.png')
 
 const MySelfComp: FC = () => {
@@ -42,6 +43,7 @@ const MySelfComp: FC = () => {
             </StudiesContainer>
             <ButtonContainer>
                 <ButtonContacto title='Contact me' />
+                <ButtonCV title='Download CV' />
             </ButtonContainer>
         </MainContainer>
     )

@@ -63,5 +63,9 @@ export const StudiesTitles = styled.h3`
 export const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 3rem;
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
 `
