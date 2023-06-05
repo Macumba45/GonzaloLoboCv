@@ -1,4 +1,6 @@
-import { FC, memo, useEffect, useState } from 'react'
+import { FC, memo } from 'react'
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import Carousel from 'react-material-ui-carousel'
 import {
     MainContainer,
@@ -8,7 +10,6 @@ import {
     ImageContainer,
     Container,
 } from './styles'
-import HoverMotion from '../../animations/hover'
 
 const FreelanceProjects: FC = () => {
     const growthBooster = require('../../assets/macbook/growth.png')
@@ -40,16 +41,8 @@ const FreelanceProjects: FC = () => {
         },
     ]
     //const imagesGrouped = chunk(projects, 3) // Agrupamos los elementos en sub-arreglos de tres
-    const [isMobile, setIsMobile] = useState(false)
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768)
-        }
-        handleResize() // inicializa el estado en función del ancho actual
-        window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
-    }, [])
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (
         <MainContainer id="freelancer-projects" className='freelancer-projects'>
@@ -60,15 +53,13 @@ const FreelanceProjects: FC = () => {
 
                 <Carousel
                     interval={5000}
-                    navButtonsAlwaysVisible={true}
                     indicators={false}
                     index={1}
-                    fullHeightHover={true}
+                    height={isMobile ? '500px' : '900px'}
                     cycleNavigation={true}
                     animation="slide"
                     sx={{
                         width: '100%',
-                        height: '100%',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -77,23 +68,23 @@ const FreelanceProjects: FC = () => {
                         //     height: '800px ',
                         // }),
                     }}
-                    navButtonsWrapperProps={{
-                        style: {
-                            marginRight: '150px',
-                            marginLeft: '150px',
-                            position: 'absolute',
-                            top: '100px',
-                            ...(isMobile && {
-                                position: 'absolute',
-                                marginRight: '120px',
-                                marginLeft: '120px',
-                                top: '-60px',
+                    // navButtonsWrapperProps={{
+                    //     style: {
+                    //         marginRight: '150px',
+                    //         marginLeft: '150px',
+                    //         position: 'absolute',
+                    //         top: '100px',
+                    //         ...(isMobile && {
+                    //             position: 'absolute',
+                    //             marginRight: '120px',
+                    //             marginLeft: '120px',
+                    //             top: '-60px',
 
-                                // Estilos específicos para pantallas menores de 600px
-                                // Agrega aquí las propiedades específicas para pantallas móviles
-                            }),
-                        },
-                    }}
+                    //             // Estilos específicos para pantallas menores de 600px
+                    //             // Agrega aquí las propiedades específicas para pantallas móviles
+                    //         }),
+                    //     },
+                    // }}
                     navButtonsProps={{
                         style: {
                             // Estilos adicionales para los botones (next y prev)
@@ -104,12 +95,9 @@ const FreelanceProjects: FC = () => {
                 >
                     {projects.map((item: any, index: any) => (
                         <ImageContainer key={index}>
-                            <HoverMotion>
-
-                                <a key={index} target="blank" href={item.link}>
-                                    <ImgColombia src={item.img} />
-                                </a>
-                            </HoverMotion>
+                            <a key={index} target="blank" href={item.link}>
+                                <ImgColombia src={item.img} />
+                            </a>
                         </ImageContainer>
                     ))}
                 </Carousel>

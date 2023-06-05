@@ -3,16 +3,15 @@ import styled from 'styled-components'
 export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 700px;
+    height: 500px;
     z-index: 9999;
 
     @media screen and (max-width: 800px) {
         margin-top: 5rem;
         margin-bottom: 5rem;
-        height: 700px;
+        height: 600px;
 
     }
 `
@@ -26,6 +25,7 @@ export const ImageContainer = styled.div`
 
 export const Container = styled.div`
     width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     @media screen and (max-width: 600px) {
@@ -36,6 +36,7 @@ export const TitleContainer = styled.div`
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    margin-top: 5rem;
 `
 
 export const Title = styled.h1`
@@ -52,7 +53,7 @@ export const ImgColombia = styled.img`
     margin-right: 2rem;
 
      @media screen and (max-width: 800px) {
-        width: 40rem;
+        width: 60rem;
     }
     @media screen and (max-width: 600px) {
         width: 30rem;
