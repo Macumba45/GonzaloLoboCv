@@ -53,7 +53,7 @@ export const ImgColombia = styled.img`
     margin-right: 2rem;
 
      @media screen and (max-width: 800px) {
-        width: 60rem;
+        width: 90%;
     }
     @media screen and (max-width: 600px) {
         width: 30rem;

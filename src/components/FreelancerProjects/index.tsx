@@ -54,6 +54,7 @@ const FreelanceProjects: FC = () => {
                 <Carousel
                     interval={5000}
                     indicators={false}
+                    navButtonsAlwaysVisible={true}
                     index={1}
                     height={isMobile ? '500px' : '900px'}
                     cycleNavigation={true}
