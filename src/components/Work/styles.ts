@@ -3,13 +3,17 @@ import styled from 'styled-components'
 export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 1200px;
+    height: 700px;
     z-index: 9999;
-    @media screen and (max-width: 600px) {
-        height: 1200px;
+
+    @media screen and (max-width: 800px) {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        height: 1100px;
+
     }
 `
 

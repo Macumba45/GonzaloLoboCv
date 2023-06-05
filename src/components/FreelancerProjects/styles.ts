@@ -3,13 +3,16 @@ import styled from 'styled-components'
 export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
-    margin-bottom: 10rem;
-    height: 1100px;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 700px;
     z-index: 9999;
-    @media screen and (max-width: 600px) {
-        height: 600px;
+
+    @media screen and (max-width: 800px) {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        height: 700px;
 
     }
 `
@@ -33,7 +36,6 @@ export const TitleContainer = styled.div`
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    margin-top: 3rem;
 `
 
 export const Title = styled.h1`

@@ -18,7 +18,7 @@ const DividerWithChip: FC<Props> = ({ label }) => {
                     height: '2rem',
                 }}
             >
-                <Divider sx={{ width: '8rem', flexGrow: 1 }} />
+                <Divider sx={{ width: '5rem', flexGrow: 1 }} />
                 <Chip
                     label={label}
                     style={{
@@ -27,7 +27,7 @@ const DividerWithChip: FC<Props> = ({ label }) => {
                         color: 'white',
                     }}
                 />
-                <Divider sx={{ width: '8rem', flexGrow: 1 }} />
+                <Divider sx={{ width: '5rem', flexGrow: 1 }} />
             </div>
         </div>
     )

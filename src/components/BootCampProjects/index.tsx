@@ -132,7 +132,7 @@ const BootcampProjects: FC = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 768)
+            setIsMobile(window.innerWidth < 780)
         }
         handleResize() // inicializa el estado en función del ancho actual
         window.addEventListener('resize', handleResize)
