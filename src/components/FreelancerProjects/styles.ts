@@ -5,13 +5,16 @@ export const MainContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 500px;
+    height: 100%;
     z-index: 9999;
+    padding-bottom: 5rem;
 
     @media screen and (max-width: 800px) {
         margin-top: 5rem;
         margin-bottom: 5rem;
         height: 600px;
+        padding-bottom: 0rem;
+
 
     }
 `
@@ -48,7 +51,7 @@ export const Title = styled.h1`
 `
 
 export const ImgColombia = styled.img`
-    width: 90rem;
+    width: 70rem;
     margin-left: 2rem;
     margin-right: 2rem;
 

@@ -11,6 +11,7 @@ import BootcampProjects from '../../components/BootCampProjects'
 import FreelanceProjects from '../../components/FreelancerProjects'
 import SoftSkills from '../../components/SoftSkills'
 import AnimatedView from '../../animations/AnimatedContainer'
+import FooterComp from '../../components/Footer'
 
 const Landing: FC = () => {
     return (
@@ -50,6 +51,9 @@ const Landing: FC = () => {
             <DividerWithChip label="Freelancer Projects" />
             <AnimatedView>
                 <FreelanceProjects />
+            </AnimatedView>
+            <AnimatedView>
+                <FooterComp />
             </AnimatedView>
 
         </>
