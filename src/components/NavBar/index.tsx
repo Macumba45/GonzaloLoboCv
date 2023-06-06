@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem'
 import { Link } from 'react-scroll';
 import { MainContainer, ContainerName, NameParrafo } from './styles'
 import HoverMotion from '../../animations/hover'
+import FloatHomeButton from '../FloatHomeButton'
 
 const pages = [
     'Education',
@@ -35,6 +36,7 @@ const NavBarComp: FC = () => {
 
     return (
         <MainContainer>
+            <FloatHomeButton />
             <AppBar
                 sx={{
                     backgroundColor: 'black',
