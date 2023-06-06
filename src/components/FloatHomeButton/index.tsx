@@ -29,7 +29,7 @@ const FloatHomeButton: FC = () => {
     return (
         <>
             {showButton && (
-                <CustomTooltip title="Agendar cita">
+                <CustomTooltip title="Call Gonzalo">
                     <Fab
                         href="tel:+34617366953"
                         target="blank"
