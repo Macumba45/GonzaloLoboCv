@@ -16,7 +16,10 @@ const ButtonContacto: FC<Props> = ({ title }) => {
                     ease: [0.43, 0.13, 0.23, 0.96],
                 }}
             >
-                <a style={{ textDecoration: 'none' }} href="mailto:gonzalolovo@gmail.com">
+                <a
+                    style={{ textDecoration: 'none' }}
+                    href="mailto:gonzalolovo@gmail.com"
+                >
                     <Button
                         sx={{
                             color: '#ffffff',

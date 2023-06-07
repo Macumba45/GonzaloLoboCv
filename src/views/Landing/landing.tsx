@@ -55,7 +55,6 @@ const Landing: FC = () => {
             <AnimatedView>
                 <FooterComp />
             </AnimatedView>
-
         </>
     )
 }

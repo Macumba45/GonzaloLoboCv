@@ -33,8 +33,8 @@ export const Title = styled.h1`
 export const SkillsContainerAll = styled.div`
     display: flex;
     justify-content: center;
-width:100%   ;
- @media screen and (max-width: 600px) {
+    width: 100%;
+    @media screen and (max-width: 600px) {
         flex-direction: column;
     }
 `
@@ -77,12 +77,12 @@ export const ImgColombia = styled.img`
     @media screen and (max-width: 600px) {
         width: 3rem;
         margin-left: 1rem;
-    margin-right: 1rem;
+        margin-right: 1rem;
     }
     @media screen and (max-width: 800px) {
         width: 4rem;
         margin-left: 1rem;
-    margin-right: 1rem;
+        margin-right: 1rem;
     }
 `
 

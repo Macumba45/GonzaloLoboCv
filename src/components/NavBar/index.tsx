@@ -8,7 +8,7 @@ import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import MenuItem from '@mui/material/MenuItem'
-import { Link } from 'react-scroll';
+import { Link } from 'react-scroll'
 import { MainContainer, ContainerName, NameParrafo } from './styles'
 import HoverMotion from '../../animations/hover'
 import FloatHomeButton from '../FloatHomeButton'
@@ -102,18 +102,25 @@ const NavBarComp: FC = () => {
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                    <MenuItem
+                                        key={page}
+                                        onClick={handleCloseNavMenu}
+                                    >
                                         <HoverMotion>
                                             <Link
                                                 activeClass="active"
-                                                to={page.toLowerCase().replace(' ', '-')}
+                                                to={page
+                                                    .toLowerCase()
+                                                    .replace(' ', '-')}
                                                 spy={true}
                                                 smooth={true}
                                                 duration={1500}
                                                 offset={-170}
                                                 onClick={handleCloseNavMenu}
                                             >
-                                                <Typography textAlign="center">{page}</Typography>
+                                                <Typography textAlign="center">
+                                                    {page}
+                                                </Typography>
                                             </Link>
                                         </HoverMotion>
                                     </MenuItem>
@@ -133,19 +140,25 @@ const NavBarComp: FC = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                <MenuItem
+                                    key={page}
+                                    onClick={handleCloseNavMenu}
+                                >
                                     <HoverMotion>
-
                                         <Link
                                             activeClass="active"
-                                            to={page.toLowerCase().replace(' ', '-')}
+                                            to={page
+                                                .toLowerCase()
+                                                .replace(' ', '-')}
                                             spy={true}
                                             smooth={true}
                                             duration={1000}
                                             offset={-70}
                                             onClick={handleCloseNavMenu}
                                         >
-                                            <Typography textAlign="center">{page}</Typography>
+                                            <Typography textAlign="center">
+                                                {page}
+                                            </Typography>
                                         </Link>
                                     </HoverMotion>
                                 </MenuItem>

@@ -21,7 +21,7 @@ const ramirez = require('../../assets/nafas.jpeg')
 
 const EntrepreneurComp: FC = () => {
     return (
-        <MainContainer id="entrepreneurship" className='entrepreneurship'>
+        <MainContainer id="entrepreneurship" className="entrepreneurship">
             <TitleContainer>
                 <Title>Entrepreneur</Title>
             </TitleContainer>
@@ -34,7 +34,9 @@ const EntrepreneurComp: FC = () => {
                         </EntrepreContainerLogo>
                         <EntrepreTitle>
                             2NAIT APP
-                            <EntrepreSubTitle>CEO & Co-founder</EntrepreSubTitle>
+                            <EntrepreSubTitle>
+                                CEO & Co-founder
+                            </EntrepreSubTitle>
                             <EntrepreDate>(2015 - 2018)</EntrepreDate>
                         </EntrepreTitle>
                     </EntrepreContainer>

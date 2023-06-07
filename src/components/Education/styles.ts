@@ -13,7 +13,6 @@ export const MainContainer = styled.div`
         margin-top: 5rem;
         margin-bottom: 5rem;
         height: 1100px;
-
     }
 `
 

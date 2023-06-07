@@ -18,9 +18,9 @@ const AnimatedTitle: FC<AnimatedComponentProps> = ({ children }) => {
             animate={{
                 opacity: 1,
                 x: [
-                    0, 5, 0, -5, 0, 0, 5, 0, -5, 0, 0, 5, 0, -5, 0, 0,
-                    5, 0, -5, 0, 0, 5, 0, -5, 0, 0, 5, 0, -5, 0, 0, 5,
-                    0, -5, 0, 0, 5, 0, -5, 0,
+                    0, 5, 0, -5, 0, 0, 5, 0, -5, 0, 0, 5, 0, -5, 0, 0, 5, 0, -5,
+                    0, 0, 5, 0, -5, 0, 0, 5, 0, -5, 0, 0, 5, 0, -5, 0, 0, 5, 0,
+                    -5, 0,
                 ],
             }}
             transition={{ duration: 1, delay: 1, easing: 'easeOut' }}

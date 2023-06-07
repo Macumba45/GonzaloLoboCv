@@ -1,6 +1,6 @@
 import { FC, memo, useEffect, useState } from 'react'
 import { Fab, Tooltip, useMediaQuery } from '@mui/material'
-import CallIcon from '@mui/icons-material/Call';
+import CallIcon from '@mui/icons-material/Call'
 const FloatHomeButton: FC = () => {
     const [showButton, setShowButton] = useState<boolean>(false)
     const isSmallScreen = useMediaQuery('(max-width:600px)')

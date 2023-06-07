@@ -1,18 +1,17 @@
-import { FC, memo } from 'react';
-import { Button } from '@mui/material';
-import { Props } from './type';
-import HoverMotion from '../../animations/hover';
-import { motion } from 'framer-motion';
+import { FC, memo } from 'react'
+import { Button } from '@mui/material'
+import { Props } from './type'
+import HoverMotion from '../../animations/hover'
+import { motion } from 'framer-motion'
 
 const ButtonCV: FC<Props> = ({ title }) => {
-
-    const PDF = require('../../assets/cv.pdf');
+    const PDF = require('../../assets/cv.pdf')
     const handleDownloadCV = () => {
-        const link = document.createElement('a');
-        link.href = PDF; // Reemplaza con la URL de tu archivo PDF
-        link.download = 'GONZALOLOBOCV.pdf'; // Nombre del archivo descargado
-        link.click();
-    };
+        const link = document.createElement('a')
+        link.href = PDF // Reemplaza con la URL de tu archivo PDF
+        link.download = 'GONZALOLOBOCV.pdf' // Nombre del archivo descargado
+        link.click()
+    }
 
     return (
         <HoverMotion>
@@ -51,7 +50,7 @@ const ButtonCV: FC<Props> = ({ title }) => {
                 </Button>
             </motion.div>
         </HoverMotion>
-    );
-};
+    )
+}
 
-export default memo(ButtonCV);
+export default memo(ButtonCV)

@@ -8,7 +8,7 @@ import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects'
 import FollowTheSignsIcon from '@mui/icons-material/FollowTheSigns'
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt'
 import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer'
 import {
     MainContainer,
     SkillsContainer,
@@ -18,20 +18,19 @@ import {
     TitleContainer,
 } from './styles'
 
-
 const SoftSkills: FC = () => {
-    const controls = useAnimation();
+    const controls = useAnimation()
     const { ref, inView } = useInView({
-        threshold: 0.00,
+        threshold: 0.0,
         triggerOnce: true,
     })
 
     const getRandomPosition = () => {
         // Generate a random position within a range
-        const min = 0;
-        const max = -100;
-        return Math.random() * (max - min) + min;
-    };
+        const min = 0
+        const max = -100
+        return Math.random() * (max - min) + min
+    }
 
     useEffect(() => {
         if (inView) {
@@ -40,12 +39,12 @@ const SoftSkills: FC = () => {
                 x: 0,
                 y: 0,
                 transition: { duration: 4, type: 'spring', bounce: 0.2 }, // Personaliza la animación según tus necesidades
-            });
+            })
         }
-    }, [controls, inView]);
+    }, [controls, inView])
 
     return (
-        <MainContainer id="soft-skills" className='soft-skills'>
+        <MainContainer id="soft-skills" className="soft-skills">
             <TitleContainer>
                 <Title>Soft Skills</Title>
             </TitleContainer>
@@ -53,60 +52,92 @@ const SoftSkills: FC = () => {
                 <HoverMotion>
                     <motion.div
                         ref={ref} // Aplica el ref del hook useInView a cada imagen
-                        initial={{ opacity: 0, x: getRandomPosition(), y: getRandomPosition() }}
+                        initial={{
+                            opacity: 0,
+                            x: getRandomPosition(),
+                            y: getRandomPosition(),
+                        }}
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
                             <AccessTimeIcon sx={{ fontSize: '4rem' }} />
-                            <SofSkillsDescription>Time Management</SofSkillsDescription>
+                            <SofSkillsDescription>
+                                Time Management
+                            </SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
                 </HoverMotion>
                 <HoverMotion>
                     <motion.div
                         ref={ref} // Aplica el ref del hook useInView a cada imagen
-                        initial={{ opacity: 0, x: getRandomPosition(), y: getRandomPosition() }}
+                        initial={{
+                            opacity: 0,
+                            x: getRandomPosition(),
+                            y: getRandomPosition(),
+                        }}
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
-                            <ConnectWithoutContactIcon sx={{ fontSize: '4rem' }} />
-                            <SofSkillsDescription>Communication</SofSkillsDescription>
+                            <ConnectWithoutContactIcon
+                                sx={{ fontSize: '4rem' }}
+                            />
+                            <SofSkillsDescription>
+                                Communication
+                            </SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
                 </HoverMotion>
                 <HoverMotion>
                     <motion.div
                         ref={ref} // Aplica el ref del hook useInView a cada imagen
-                        initial={{ opacity: 0, x: getRandomPosition(), y: getRandomPosition() }}
+                        initial={{
+                            opacity: 0,
+                            x: getRandomPosition(),
+                            y: getRandomPosition(),
+                        }}
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
                             <AddReactionIcon sx={{ fontSize: '4rem' }} />
-                            <SofSkillsDescription>Adaptability</SofSkillsDescription>
+                            <SofSkillsDescription>
+                                Adaptability
+                            </SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
                 </HoverMotion>
                 <HoverMotion>
                     <motion.div
                         ref={ref} // Aplica el ref del hook useInView a cada imagen
-                        initial={{ opacity: 0, x: getRandomPosition(), y: getRandomPosition() }}
+                        initial={{
+                            opacity: 0,
+                            x: getRandomPosition(),
+                            y: getRandomPosition(),
+                        }}
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
                             <Diversity3Icon sx={{ fontSize: '4rem' }} />
-                            <SofSkillsDescription>Teamwork skills</SofSkillsDescription>
+                            <SofSkillsDescription>
+                                Teamwork skills
+                            </SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
                 </HoverMotion>
                 <HoverMotion>
                     <motion.div
                         ref={ref} // Aplica el ref del hook useInView a cada imagen
-                        initial={{ opacity: 0, x: getRandomPosition(), y: getRandomPosition() }}
+                        initial={{
+                            opacity: 0,
+                            x: getRandomPosition(),
+                            y: getRandomPosition(),
+                        }}
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
                             <EmojiObjectsIcon sx={{ fontSize: '4rem' }} />
-                            <SofSkillsDescription>Problem-solving</SofSkillsDescription>
+                            <SofSkillsDescription>
+                                Problem-solving
+                            </SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
                 </HoverMotion>
@@ -114,12 +145,18 @@ const SoftSkills: FC = () => {
                 <HoverMotion>
                     <motion.div
                         ref={ref} // Aplica el ref del hook useInView a cada imagen
-                        initial={{ opacity: 0, x: getRandomPosition(), y: getRandomPosition() }}
+                        initial={{
+                            opacity: 0,
+                            x: getRandomPosition(),
+                            y: getRandomPosition(),
+                        }}
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
                             <FollowTheSignsIcon sx={{ fontSize: '4rem' }} />
-                            <SofSkillsDescription>Leadership</SofSkillsDescription>
+                            <SofSkillsDescription>
+                                Leadership
+                            </SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
                 </HoverMotion>
@@ -127,18 +164,23 @@ const SoftSkills: FC = () => {
                 <HoverMotion>
                     <motion.div
                         ref={ref} // Aplica el ref del hook useInView a cada imagen
-                        initial={{ opacity: 0, x: getRandomPosition(), y: getRandomPosition() }}
+                        initial={{
+                            opacity: 0,
+                            x: getRandomPosition(),
+                            y: getRandomPosition(),
+                        }}
                         animate={controls}
                     >
                         <SkillsContainerIndividual>
                             <ThumbUpAltIcon sx={{ fontSize: '4rem' }} />
-                            <SofSkillsDescription>Interpersonal skills</SofSkillsDescription>
+                            <SofSkillsDescription>
+                                Interpersonal skills
+                            </SofSkillsDescription>
                         </SkillsContainerIndividual>
                     </motion.div>
                 </HoverMotion>
             </SkillsContainer>
         </MainContainer>
-
     )
 }
 

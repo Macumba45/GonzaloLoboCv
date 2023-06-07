@@ -12,11 +12,9 @@ type AnimatedComponentProps = MotionProps & {
 }
 
 const AnimatedView: FC<AnimatedComponentProps> = ({ children }) => {
-
     const [isMobile, setIsMobile] = useState(false)
-    const threshold = isMobile ? 0.1 : 0.3;
-    const triggerOnce = true;
-
+    const threshold = isMobile ? 0.1 : 0.3
+    const triggerOnce = true
 
     useEffect(() => {
         const handleResize = () => {
@@ -30,7 +28,6 @@ const AnimatedView: FC<AnimatedComponentProps> = ({ children }) => {
     const { ref, inView } = useInView({
         threshold,
         triggerOnce,
-
     })
 
     const containerVariants = {
@@ -59,7 +56,6 @@ const AnimatedView: FC<AnimatedComponentProps> = ({ children }) => {
 
     return (
         <motion.div
-
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
             exit="exit"

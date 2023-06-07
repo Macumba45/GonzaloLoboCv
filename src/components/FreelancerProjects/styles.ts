@@ -14,8 +14,6 @@ export const MainContainer = styled.div`
         margin-bottom: 5rem;
         height: 600px;
         padding-bottom: 0rem;
-
-
     }
 `
 
@@ -55,14 +53,12 @@ export const ImgColombia = styled.img`
     margin-left: 2rem;
     margin-right: 2rem;
 
-     @media screen and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
         width: 90%;
     }
     @media screen and (max-width: 600px) {
         width: 30rem;
     }
-
-   
 `
 
 export const SpanBold = styled.span`

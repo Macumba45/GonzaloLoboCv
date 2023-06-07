@@ -45,7 +45,7 @@ const FreelanceProjects: FC = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (
-        <MainContainer id="freelancer-projects" className='freelancer-projects'>
+        <MainContainer id="freelancer-projects" className="freelancer-projects">
             <Container>
                 <TitleContainer>
                     <Title>Freelancer Projects</Title>

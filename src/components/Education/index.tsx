@@ -19,7 +19,7 @@ const colombia = require('../../assets/colombia.png')
 
 const EducationComp: FC = () => {
     return (
-        <MainContainer id="education" className='Education'>
+        <MainContainer id="education" className="Education">
             <TitleContainer>
                 <Title>Education</Title>
             </TitleContainer>
@@ -43,7 +43,9 @@ const EducationComp: FC = () => {
                 </HoverMotion>
                 <HoverMotion>
                     <EducationContainer>
-                        <WorkIcon sx={{ fontSize: '4rem', marginBottom: '2rem' }} />
+                        <WorkIcon
+                            sx={{ fontSize: '4rem', marginBottom: '2rem' }}
+                        />
                         <EducationTitle>
                             Master in International {<br />} Business & Trade.
                             <EducationSubTitle>

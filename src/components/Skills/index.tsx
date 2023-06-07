@@ -1,7 +1,7 @@
 import { FC, memo, useEffect } from 'react'
 import HoverMotion from '../../animations/hover'
 import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer'
 import {
     SkillsContainerAll,
     SkillsContainer,
@@ -11,8 +11,6 @@ import {
     ImgColombia,
     SkillsContainerLogo,
 } from './styles'
-
-
 
 const html = require('../../assets/skills/html.png')
 const css = require('../../assets/skills/css.png')
@@ -51,8 +49,7 @@ const skills: Skills = {
 }
 
 const SkillsComp: FC = () => {
-
-    const controls = useAnimation();
+    const controls = useAnimation()
     const { ref, inView } = useInView({
         threshold: 0.0,
         triggerOnce: true,
@@ -60,10 +57,10 @@ const SkillsComp: FC = () => {
 
     const getRandomPosition = () => {
         // Generate a random position within a range
-        const min = 0;
-        const max = -100;
-        return Math.random() * (max - min) + min;
-    };
+        const min = 0
+        const max = -100
+        return Math.random() * (max - min) + min
+    }
 
     useEffect(() => {
         if (inView) {
@@ -72,23 +69,27 @@ const SkillsComp: FC = () => {
                 x: 0,
                 y: 0,
                 transition: { duration: 4, type: 'spring', bounce: 0.2 }, // Personaliza la animación según tus necesidades
-            });
+            })
         }
-    }, [controls, inView]);
+    }, [controls, inView])
     return (
-        <MainContainer >
+        <MainContainer>
             <TitleContainer>
                 <Title>Skills</Title>
             </TitleContainer>
             <SkillsContainerAll>
                 <SkillsContainer>
-                    <SkillsContainerLogo id="skills" className='skills' >
+                    <SkillsContainerLogo id="skills" className="skills">
                         {Object.keys(skills).map((skill, index) => (
                             <HoverMotion key={index}>
                                 <motion.div
                                     key={index}
                                     ref={ref} // Aplica el ref del hook useInView a cada imagen
-                                    initial={{ opacity: 0, x: getRandomPosition(), y: getRandomPosition() }}
+                                    initial={{
+                                        opacity: 0,
+                                        x: getRandomPosition(),
+                                        y: getRandomPosition(),
+                                    }}
                                     animate={controls}
                                 >
                                     <ImgColombia

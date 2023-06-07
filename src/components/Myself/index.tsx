@@ -35,15 +35,17 @@ const MySelfComp: FC = () => {
                     <StudiesTitles>Full Stack Developer MERN</StudiesTitles>
                 </AnimatedSideTitle>
                 <AnimatedSideTitle2>
-                    <StudiesTitles>International Business & Trade</StudiesTitles>
+                    <StudiesTitles>
+                        International Business & Trade
+                    </StudiesTitles>
                 </AnimatedSideTitle2>
                 <AnimatedSideTitle>
                     <StudiesTitles>Financial & Account Graduate</StudiesTitles>
                 </AnimatedSideTitle>
             </StudiesContainer>
             <ButtonContainer>
-                <ButtonContacto title='Contact me' />
-                <ButtonCV title='Download CV' />
+                <ButtonContacto title="Contact me" />
+                <ButtonCV title="Download CV" />
             </ButtonContainer>
         </MainContainer>
     )

@@ -140,7 +140,7 @@ const BootcampProjects: FC = () => {
     }, [])
 
     return (
-        <MainContainer id="bootcamp-projects" className='bootcamp-projects'>
+        <MainContainer id="bootcamp-projects" className="bootcamp-projects">
             <TitleContainer>
                 <Title>BootCamp Projects</Title>
             </TitleContainer>
@@ -187,7 +187,6 @@ const BootcampProjects: FC = () => {
                         ))}
                     </FullWidthCarousel>
                 ) : (
-
                     <FullWidthCarousel
                         interval={5000}
                         animation={'fade'}
@@ -214,9 +213,14 @@ const BootcampProjects: FC = () => {
                                     <ImageContainer key={subIndex}>
                                         {item.img && (
                                             <HoverMotion>
-
-                                                <a key={index} target="blank" href={item.link}>
-                                                    <ImgColombia src={item.img} />
+                                                <a
+                                                    key={index}
+                                                    target="blank"
+                                                    href={item.link}
+                                                >
+                                                    <ImgColombia
+                                                        src={item.img}
+                                                    />
                                                 </a>
                                             </HoverMotion>
                                         )}

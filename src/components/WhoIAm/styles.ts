@@ -13,7 +13,6 @@ export const MainContainer = styled.div`
         margin-top: 5rem;
         margin-bottom: 5rem;
         height: 1100px;
-
     }
 `
 
@@ -58,7 +57,6 @@ export const Description = styled.p`
     margin-bottom: 2rem;
     line-height: 2rem;
     white-space: wrap;
-    
 `
 
 export const SpanBold = styled.span`

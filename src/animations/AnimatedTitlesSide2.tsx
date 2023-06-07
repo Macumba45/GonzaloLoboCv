@@ -15,11 +15,12 @@ const AnimatedSideTitle2: FC<AnimatedComponentProps> = ({ children }) => {
         <motion.div
             animate={{
                 opacity: 1,
-                x: [1000, 0, -100, 0
-                ],
+                x: [1000, 0, -100, 0],
             }}
             transition={{
-                duration: 1, delay: 1, ease: "easeOut",
+                duration: 1,
+                delay: 1,
+                ease: 'easeOut',
             }}
         >
             {children}
