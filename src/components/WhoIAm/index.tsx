@@ -19,14 +19,25 @@ const WhoIAmComp: FC = () => {
                     I would like to introduce myself as a
                     <SpanBold> Junior Full Stack Developer</SpanBold> with a
                     great learning capacity. I have experience developing web
-                    FrontEnd applications using technologies such as  <SpanBold> JavaScript,
-                        HTML, CSS, Styled-Components, and frameworks like React</SpanBold>. In
-                    addition, I have proficiency in backend development using <SpanBold>
-                        Node.js and frameworks like Express and Docker</SpanBold>. <SpanBold>My skill set
-                            includes HTML, CSS, JavaScript, TypeScript, Firebase, React,
-                            Docker, Framer, Git, MongoDB, Styled-Components, Material-UI
-                            (MUI), Node.js, PostgreSQL, and I am currently studying
-                            React Native, Expo Go, and NativeBase.</SpanBold>
+                    FrontEnd applications using technologies such as{' '}
+                    <SpanBold>
+                        {' '}
+                        JavaScript, HTML, CSS, Styled-Components, and frameworks
+                        like React
+                    </SpanBold>
+                    . In addition, I have proficiency in backend development
+                    using{' '}
+                    <SpanBold>
+                        Node.js and frameworks like Express and Docker
+                    </SpanBold>
+                    .{' '}
+                    <SpanBold>
+                        My skill set includes HTML, CSS, JavaScript, TypeScript,
+                        Firebase, React, Docker, Framer, Git, MongoDB,
+                        Styled-Components, Material-UI (MUI), Node.js,
+                        PostgreSQL, and I am currently studying React Native,
+                        Expo Go, and NativeBase.
+                    </SpanBold>
                 </Description>
                 <Description>
                     I am always looking for

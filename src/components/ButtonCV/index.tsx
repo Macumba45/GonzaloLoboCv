@@ -4,8 +4,10 @@ import { Props } from './type'
 import HoverMotion from '../../animations/hover'
 import { motion } from 'framer-motion'
 
+const PDF = require('../../../src/assets/GONZALOLOBOCV.pdf')
+console.log(PDF)
+
 const ButtonCV: FC<Props> = ({ title }) => {
-    const PDF = require('../../assets/cv.pdf')
     const handleDownloadCV = () => {
         const link = document.createElement('a')
         link.href = PDF // Reemplaza con la URL de tu archivo PDF
