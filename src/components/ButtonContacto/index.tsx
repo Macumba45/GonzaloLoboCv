@@ -13,7 +13,7 @@ const ButtonContacto: FC<Props> = ({ title }) => {
                 transition={{
                     duration: 1,
                     delay: 0.4,
-                    ease: [0.43, 0.13, 0.23, 0.96],
+                    ease: [0.43, 0.13, 0.23, 0.95],
                 }}
             >
                 <a
