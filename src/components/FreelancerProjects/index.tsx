@@ -21,7 +21,7 @@ const FreelanceProjects: FC = () => {
     const projects: any = [
         {
             img: growthBooster,
-            link: 'https://growthboosters.eu/',
+            link: 'https://growthboosters.vercel.app/',
         },
         {
             img: toscana,
