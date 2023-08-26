@@ -33,7 +33,7 @@ const FreelanceProjects: FC = () => {
         },
         {
             img: baby,
-            link: 'https://wonderbaby.vercel.app/',
+            link: 'https://wonderbaby.vercel.app/dashboard/',
         },
         {
             img: allison,
