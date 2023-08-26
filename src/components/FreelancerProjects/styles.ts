@@ -50,6 +50,8 @@ export const Title = styled.h1`
 
 export const ImgColombia = styled.img`
     width: 100%;
+    cursor: pointer;
+
 
   
 `

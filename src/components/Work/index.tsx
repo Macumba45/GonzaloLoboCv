@@ -15,12 +15,24 @@ import HoverMotion from '../../animations/hover'
 
 const azcatec = require('../../assets/azcatec.png')
 const myhixel = require('../../assets/myhixel.webp')
-const ramirez = require('../../assets/ramirez.png')
+const freelance = require('../../assets/freelance.webp')
 
 const WorkComp: FC = () => {
     return (
         <MainContainer id="job-experiences" className="job-experiences">
             <WorkContainerAll>
+                <HoverMotion>
+                    <WorkContainer>
+                        <WorkContainerLogo>
+                            <ImgColombia style={{ width: 280 }} src={freelance} />
+                        </WorkContainerLogo>
+                        <WorkTitle>
+                            Full Stack Developer {<br />} & WebApp developer.
+                            <WorkSubTitle>Freelance</WorkSubTitle>
+                            <WorkDate>(2023 - Nowadays)</WorkDate>
+                        </WorkTitle>
+                    </WorkContainer>
+                </HoverMotion>
                 <HoverMotion>
                     <WorkContainer>
                         <WorkContainerLogo>
@@ -45,18 +57,7 @@ const WorkComp: FC = () => {
                         </WorkTitle>
                     </WorkContainer>
                 </HoverMotion>
-                <HoverMotion>
-                    <WorkContainer>
-                        <WorkContainerLogo>
-                            <ImgColombia src={ramirez} />
-                        </WorkContainerLogo>
-                        <WorkTitle>
-                            Wealth management {<br />} & control
-                            <WorkSubTitle>Ramirez Mota CB</WorkSubTitle>
-                            <WorkDate>(2015 - Nowadays)</WorkDate>
-                        </WorkTitle>
-                    </WorkContainer>
-                </HoverMotion>
+
             </WorkContainerAll>
         </MainContainer>
     )

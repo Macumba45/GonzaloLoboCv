@@ -17,11 +17,17 @@ const FreelanceProjects: FC = () => {
     const inch = require('../../assets/macbook/9inch.png')
     const baby = require('../../assets/macbook/baby.png')
     const allison = require('../../assets/macbook/allison.png')
+    const fish = require('../../assets/macbook/FISH.png')
+
 
     const projects: any = [
         {
             img: growthBooster,
             link: 'https://growthboosters.vercel.app/',
+        },
+        {
+            img: fish,
+            link: 'https://fishgramapp.vercel.app/maps',
         },
         {
             img: toscana,
@@ -48,11 +54,12 @@ const FreelanceProjects: FC = () => {
         <MainContainer id="projects" className="projects">
             <Container>
                 <Carousel
+                    sx={{ cursor: 'pointer' }}
                     indicators={false}
                     autoPlay={false}
                     navButtonsAlwaysVisible={true}
                     cycleNavigation={true}
-                    index={2}
+                    index={1}
                     animation="fade"
                     navButtonsWrapperProps={{
                         style: {
@@ -69,7 +76,7 @@ const FreelanceProjects: FC = () => {
                 >
                     {projects.map((item: any, index: any) => (
                         <ImageContainer key={index}>
-                            <a key={index} target="blank" href={item.link}>
+                            <a style={{ cursor: 'pointer' }} key={index} target="blank" href={item.link}>
                                 <ImgColombia src={item.img} />
                             </a>
                         </ImageContainer>
