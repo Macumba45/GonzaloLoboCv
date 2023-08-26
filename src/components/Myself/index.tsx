@@ -32,16 +32,16 @@ const MySelfComp: FC = () => {
             </NameContainer>
             <StudiesContainer>
                 <AnimatedSideTitle>
-                    <StudiesTitles>Full Stack Developer MERN</StudiesTitles>
+                    <StudiesTitles>Full Stack Developer</StudiesTitles>
                 </AnimatedSideTitle>
-                <AnimatedSideTitle2>
+                {/* <AnimatedSideTitle2>
                     <StudiesTitles>
                         International Business & Trade
                     </StudiesTitles>
                 </AnimatedSideTitle2>
                 <AnimatedSideTitle>
                     <StudiesTitles>Financial & Account Graduate</StudiesTitles>
-                </AnimatedSideTitle>
+                </AnimatedSideTitle> */}
             </StudiesContainer>
             <ButtonContainer>
                 <ButtonContacto title="Contact me" />

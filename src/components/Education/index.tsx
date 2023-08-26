@@ -20,10 +20,6 @@ const colombia = require('../../assets/colombia.png')
 const EducationComp: FC = () => {
     return (
         <MainContainer id="education" className="Education">
-            <TitleContainer>
-                <Title>Education</Title>
-            </TitleContainer>
-
             <EducationContainerAll>
                 <HoverMotion>
                     <EducationContainer>

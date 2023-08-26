@@ -20,10 +20,6 @@ const ramirez = require('../../assets/ramirez.png')
 const WorkComp: FC = () => {
     return (
         <MainContainer id="work-experiences" className="work-experiences">
-            <TitleContainer>
-                <Title>Job Exp</Title>
-            </TitleContainer>
-
             <WorkContainerAll>
                 <HoverMotion>
                     <WorkContainer>

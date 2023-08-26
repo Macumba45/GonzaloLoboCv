@@ -20,11 +20,11 @@ const Landing: FC = () => {
                 <NavBar />
                 <MySelfComp />
             </AnimatedView>
-            <DividerWithChip label="Know me more" />
+            <DividerWithChip label="About me" />
             <AnimatedView>
                 <WhoIAmComp />
             </AnimatedView>
-            <DividerWithChip label="My Education" />
+            <DividerWithChip label="Education" />
             <AnimatedView>
                 <EducationComp />
             </AnimatedView>

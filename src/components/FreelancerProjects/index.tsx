@@ -47,10 +47,6 @@ const FreelanceProjects: FC = () => {
     return (
         <MainContainer id="freelancer-projects" className="freelancer-projects">
             <Container>
-                <TitleContainer>
-                    <Title>Freelancer Projects</Title>
-                </TitleContainer>
-
                 <Carousel
                     interval={5000}
                     indicators={false}

@@ -45,9 +45,6 @@ const SoftSkills: FC = () => {
 
     return (
         <MainContainer id="soft-skills" className="soft-skills">
-            <TitleContainer>
-                <Title>Soft Skills</Title>
-            </TitleContainer>
             <SkillsContainer>
                 <HoverMotion>
                     <motion.div

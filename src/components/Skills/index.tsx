@@ -19,13 +19,16 @@ const type = require('../../assets/skills/type.png')
 const firebase = require('../../assets/skills/firebase.png')
 const react = require('../../assets/skills/react.png')
 const docker = require('../../assets/skills/docker.png')
-const framer = require('../../assets/skills/framer.png')
+const framer = require('../../assets/skills/framer.webp')
 const git = require('../../assets/skills/git.png')
 const mongo = require('../../assets/skills/mongo.png')
 const styled = require('../../assets/skills/styled.png')
 const mui = require('../../assets/skills/mui.png')
 const node = require('../../assets/skills/node1.png')
 const postgres = require('../../assets/skills/postgres.png')
+const nextJs = require('../../assets/skills/nextjs.png')
+const prisma = require('../../assets/skills/prisma.png')
+const vercel = require('../../assets/skills/vercel.png')
 
 interface Skills {
     [key: string]: any
@@ -46,6 +49,9 @@ const skills: Skills = {
     mui: mui,
     node: node,
     postgres: postgres,
+    nextJs: nextJs,
+    prisma: prisma,
+    vercel: vercel,
 }
 
 const SkillsComp: FC = () => {
@@ -74,9 +80,6 @@ const SkillsComp: FC = () => {
     }, [controls, inView])
     return (
         <MainContainer>
-            <TitleContainer>
-                <Title>Skills</Title>
-            </TitleContainer>
             <SkillsContainerAll>
                 <SkillsContainer>
                     <SkillsContainerLogo id="skills" className="skills">

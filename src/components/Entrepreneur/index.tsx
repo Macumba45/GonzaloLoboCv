@@ -22,10 +22,6 @@ const ramirez = require('../../assets/nafas.jpeg')
 const EntrepreneurComp: FC = () => {
     return (
         <MainContainer id="entrepreneurship" className="entrepreneurship">
-            <TitleContainer>
-                <Title>Entrepreneur</Title>
-            </TitleContainer>
-
             <EntrepreContainerAll>
                 <HoverMotion>
                     <EntrepreContainer>

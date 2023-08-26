@@ -141,9 +141,6 @@ const BootcampProjects: FC = () => {
 
     return (
         <MainContainer id="bootcamp-projects" className="bootcamp-projects">
-            <TitleContainer>
-                <Title>BootCamp Projects</Title>
-            </TitleContainer>
             <Container>
                 {isMobile ? (
                     <FullWidthCarousel

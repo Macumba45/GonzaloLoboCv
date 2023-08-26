@@ -37,7 +37,8 @@ export const Name = styled.h1`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 300;
+    text-align: center;
 `
 
 export const StudiesContainer = styled.div`
@@ -53,12 +54,12 @@ export const StudiesContainer = styled.div`
 
 export const StudiesTitles = styled.h3`
     font-family: ${({ theme }) => theme.fonts.poppins};
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     margin-right: 1rem;
     margin-left: 1rem;
     text-align: center;
-    font-weight: 300;
+    font-weight: 700;
 `
 export const ButtonContainer = styled.div`
     display: flex;

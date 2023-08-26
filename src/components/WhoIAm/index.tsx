@@ -11,49 +11,45 @@ import {
 const WhoIAmComp: FC = () => {
     return (
         <MainContainer>
-            <TitleContainer>
-                <Title>Who am i?</Title>
-            </TitleContainer>
             <DescriptionContainer>
                 <Description>
-                    I would like to introduce myself as a
-                    <SpanBold> Junior Full Stack Developer</SpanBold> with a
-                    great learning capacity. I have experience developing web
-                    FrontEnd applications using technologies such as{' '}
+                    I'm Gonzalo, a web developer passionate about creating
+                    high-quality applications. I specialize in front-end
+                    technologies like{' '}
                     <SpanBold>
                         {' '}
-                        JavaScript, HTML, CSS, Styled-Components, and frameworks
-                        like React
+                        React, NextJS, HTML, CSS, and JavaScript, as well as
+                        back-end technologies like NodeJS, prisma, MongoDB,
+                        Prisma and Postgres{' '}
                     </SpanBold>
-                    . In addition, I have proficiency in backend development
-                    using{' '}
+                    . I learned technologies like
                     <SpanBold>
-                        Node.js and frameworks like Express and Docker
-                    </SpanBold>
-                    .{' '}
-                    <SpanBold>
-                        My skill set includes HTML, CSS, JavaScript, TypeScript,
-                        Firebase, React, Docker, Framer, Git, MongoDB,
-                        Styled-Components, Material-UI (MUI), Node.js,
-                        PostgreSQL, and I am currently studying React Native,
-                        Expo Go, and NativeBase.
-                    </SpanBold>
+                        TypeScript, Firebase, Prisma, Docker, and Git.
+                    </SpanBold>{' '}
+                    I have also worked with UI design frameworks like{' '}
+                    <SpanBold>Framer and MUI.</SpanBold>
                 </Description>
                 <Description>
-                    I am always looking for
+                    In addition, I have experience in finance, accounting,
+                    trade, and international business management{' '}
                     <SpanBold>
                         {' '}
-                        new challenges to continue growing professionally and i
-                        am willing to work as a team and collaborate with my
-                        co-workers to achieve the company's goals.
+                        for clients in Spain, Colombia, and the United States.
                     </SpanBold>{' '}
-                    My focus is always to provide high quality service and meet
-                    customer expectations.
+                    I really want to learn new technologies and frameworks. I
+                    also stand out for my ability to solve problems and customer
+                    orientation.
+                </Description>
+                <Description>
+                    I love working on challenging projects and coming up with
+                    creative solutions that help users.{' '}
                     <SpanBold>
-                        {' '}
-                        I am sure that my experience and skills would be of
-                        great benefit to your company.
-                    </SpanBold>
+                        If you are looking for a highly competent developer with
+                        extensive experience in React and other technologies,
+                        please do not hesitate to contact me.
+                    </SpanBold>{' '}
+                    I am excited to explore new job opportunities and use my
+                    skills to make a difference in the development industry.
                 </Description>
             </DescriptionContainer>
         </MainContainer>
