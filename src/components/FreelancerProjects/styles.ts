@@ -7,12 +7,13 @@ export const MainContainer = styled.div`
     width: 100%;
     height: 100%;
     z-index: 9999;
-    padding-bottom: 5rem;
-
+    margin-top: 5rem;
+        margin-bottom: 5rem;
+        background: rgb(37,37,37);
+background: radial-gradient(circle, rgba(37,37,37,1) 6%, rgba(0,0,0,1) 100%);
     @media screen and (max-width: 800px) {
         margin-top: 5rem;
         margin-bottom: 5rem;
-        height: 600px;
         padding-bottom: 0rem;
     }
 `
@@ -20,14 +21,13 @@ export const MainContainer = styled.div`
 export const ImageContainer = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 5rem;
 `
 
 export const Container = styled.div`
     width: 100%;
-    height: 100%;
-    justify-content: center;
+
     align-items: center;
     @media screen and (max-width: 600px) {
     }
@@ -49,16 +49,9 @@ export const Title = styled.h1`
 `
 
 export const ImgColombia = styled.img`
-    width: 70rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    width: 100%;
 
-    @media screen and (max-width: 800px) {
-        width: 90%;
-    }
-    @media screen and (max-width: 600px) {
-        width: 30rem;
-    }
+  
 `
 
 export const SpanBold = styled.span`

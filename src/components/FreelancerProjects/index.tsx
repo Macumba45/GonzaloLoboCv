@@ -45,43 +45,20 @@ const FreelanceProjects: FC = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (
-        <MainContainer id="freelancer-projects" className="freelancer-projects">
+        <MainContainer id="projects" className="projects">
             <Container>
                 <Carousel
-                    interval={5000}
                     indicators={false}
+                    autoPlay={false}
                     navButtonsAlwaysVisible={true}
-                    index={1}
-                    height={isMobile ? '500px' : '900px'}
                     cycleNavigation={true}
-                    animation="slide"
-                    sx={{
-                        width: '100%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexDirection: 'column',
-                        // ...(isMobile && {
-                        //     height: '800px ',
-                        // }),
+                    index={2}
+                    animation="fade"
+                    navButtonsWrapperProps={{
+                        style: {
+                            height: '100%',
+                        },
                     }}
-                    // navButtonsWrapperProps={{
-                    //     style: {
-                    //         marginRight: '150px',
-                    //         marginLeft: '150px',
-                    //         position: 'absolute',
-                    //         top: '100px',
-                    //         ...(isMobile && {
-                    //             position: 'absolute',
-                    //             marginRight: '120px',
-                    //             marginLeft: '120px',
-                    //             top: '-60px',
-
-                    //             // Estilos específicos para pantallas menores de 600px
-                    //             // Agrega aquí las propiedades específicas para pantallas móviles
-                    //         }),
-                    //     },
-                    // }}
                     navButtonsProps={{
                         style: {
                             // Estilos adicionales para los botones (next y prev)

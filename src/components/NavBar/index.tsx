@@ -14,13 +14,13 @@ import HoverMotion from '../../animations/hover'
 import FloatHomeButton from '../FloatHomeButton'
 
 const pages = [
+    'Projects',
     'Education',
     'Job Experiences',
     'Entrepreneurship',
     'Skills',
     'Soft Skills',
     'BootCamp Projects',
-    'Freelancer Projects',
 ]
 
 const NavBarComp: FC = () => {
@@ -101,7 +101,7 @@ const NavBarComp: FC = () => {
                                     },
                                 }}
                             >
-                                {pages.map((page) => (
+                                {pages.map((page: any) => (
                                     <MenuItem
                                         key={page}
                                         onClick={handleCloseNavMenu}
@@ -109,9 +109,7 @@ const NavBarComp: FC = () => {
                                         <HoverMotion>
                                             <Link
                                                 activeClass="active"
-                                                to={page
-                                                    .toLowerCase()
-                                                    .replace(' ', '-')}
+                                                to={page.toLowerCase().replace(' ', '-')}
                                                 spy={true}
                                                 smooth={true}
                                                 duration={1500}
@@ -147,7 +145,7 @@ const NavBarComp: FC = () => {
                                     <HoverMotion>
                                         <Link
                                             activeClass="active"
-                                            to={page
+                                            to={page!
                                                 .toLowerCase()
                                                 .replace(' ', '-')}
                                             spy={true}

@@ -24,6 +24,10 @@ const Landing: FC = () => {
             <AnimatedView>
                 <WhoIAmComp />
             </AnimatedView>
+            <DividerWithChip label="Full Stack Projects" />
+            <AnimatedView>
+                <FreelanceProjects />
+            </AnimatedView>
             <DividerWithChip label="Education" />
             <AnimatedView>
                 <EducationComp />
@@ -48,10 +52,7 @@ const Landing: FC = () => {
             <AnimatedView>
                 <BootcampProjects />
             </AnimatedView>
-            <DividerWithChip label="Freelancer Projects" />
-            <AnimatedView>
-                <FreelanceProjects />
-            </AnimatedView>
+
             <AnimatedView>
                 <FooterComp />
             </AnimatedView>

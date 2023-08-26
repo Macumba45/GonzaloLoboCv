@@ -5,7 +5,6 @@ import HoverMotion from '../../animations/hover'
 import { motion } from 'framer-motion'
 
 const PDF = require('../../../src/assets/GONZALOLOBOCV.pdf')
-console.log(PDF)
 
 const ButtonCV: FC<Props> = ({ title }) => {
     const handleDownloadCV = () => {
