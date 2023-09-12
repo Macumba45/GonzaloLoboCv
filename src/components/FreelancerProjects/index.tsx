@@ -27,7 +27,7 @@ const FreelanceProjects: FC = () => {
         },
         {
             img: fish,
-            link: 'https://fishgramapp.vercel.app/maps',
+            link: 'https://fishgramapp.vercel.app/es/maps',
         },
         {
             img: toscana,
