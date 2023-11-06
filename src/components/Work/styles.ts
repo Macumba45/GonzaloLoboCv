@@ -72,7 +72,7 @@ export const WorkTitle = styled.h3`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 1.4rem;
-    font-weight: 700;
+    font-weight: 700;   
     text-align: center;
 `
 
@@ -102,7 +102,7 @@ export const ImgColombia = styled.img`
 export const ImgRamirez = styled.img`
     width: 13rem;
     margin-bottom: 3rem;
-`
+`   
 
 export const SpanBold = styled.span`
     font-family: ${({ theme }) => theme.fonts.poppins};

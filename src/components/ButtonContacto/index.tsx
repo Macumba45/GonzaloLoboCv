@@ -29,8 +29,8 @@ const ButtonContacto: FC<Props> = ({ title }) => {
                             marginLeft: '1rem',
                             width: '300px',
                             '&:hover': {
-                                borderColor: '#FF6600',
-                                backgroundColor: '#4e87db',
+                                backgroundColor: '#ffffff',
+                                color: 'black'
                             },
                         }}
                         variant="contained"

@@ -33,9 +33,12 @@ const ButtonCV: FC<Props> = ({ title }) => {
                         marginRight: '1rem',
                         marginLeft: '1rem',
                         width: '300px',
+                        outline: 'none',
                         '&:hover': {
-                            backgroundColor: '#4e87db',
+                            backgroundColor: '#000000',
                             color: '#ffffff',
+                            outline: 'none',
+                            border: 'none'
                         },
                     }}
                     variant="outlined"
