@@ -94,8 +94,9 @@ export const WorkDate = styled.p`
 
 export const ImgColombia = styled.img`
     width: 12rem;
-    height: auto;
+    height: 80px;
     margin-bottom: 3rem;
+    border-radius: 10px;
 `
 
 export const ImgRamirez = styled.img`

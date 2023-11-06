@@ -36,11 +36,11 @@ const WorkComp: FC = () => {
                 <HoverMotion>
                     <WorkContainer>
                         <WorkContainerLogo>
-                            <ImgColombia src={myhixel} />
+                            <ImgColombia src='https://www.medicallogistic.sk/wp-content/uploads/2022/05/slider2-scaled.jpg' />
                         </WorkContainerLogo>
                         <WorkTitle>
                             International Logistics {<br />} & Customer Service.
-                            <WorkSubTitle>MYHIXEL</WorkSubTitle>
+                            <WorkSubTitle>MEDICAL TECH</WorkSubTitle>
                             <WorkDate>(September 2021 - October 2022)</WorkDate>
                         </WorkTitle>
                     </WorkContainer>
