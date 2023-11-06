@@ -18,6 +18,7 @@ const FreelanceProjects: FC = () => {
     const baby = require('../../assets/macbook/baby.png')
     const allison = require('../../assets/macbook/allison.png')
     const fish = require('../../assets/macbook/FISH.png')
+    const sevilla = require('../../assets/macbook/sevillaeste.png')
 
 
     const projects: any = [
@@ -28,6 +29,10 @@ const FreelanceProjects: FC = () => {
         {
             img: fish,
             link: 'https://fishgramapp.vercel.app/es/maps',
+        },
+        {
+            img: sevilla,
+            link: 'https://sevillaestefarmacia.vercel.app/',
         },
         {
             img: toscana,
