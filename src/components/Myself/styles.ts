@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
-
     width: 100%;
     height: 900px;
     z-index: 9999;
@@ -24,7 +23,9 @@ export const Picture = styled.img`
     height: 250px;
     background-size: cover;
     object-fit: cover;
-    box-shadow: 0px 5px 20px black;
+    border: 5px solid #f0f0f0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+                0 6px 20px rgba(0, 0, 0, 0.19);
 `
 
 export const NameContainer = styled.div`

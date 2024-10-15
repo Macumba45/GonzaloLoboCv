@@ -12,10 +12,9 @@ import {
 } from './styles'
 import HoverMotion from '../../animations/hover'
 import AnimatedSideTitle from '../../animations/AnimatedTitlesSide'
-import AnimatedSideTitle2 from '../../animations/AnimatedTitlesSide2'
 import ButtonContacto from '../ButtonContacto'
 import ButtonCV from '../ButtonCV'
-const picture = require('../../assets/yo1.png')
+const picture = require('../../assets/yo1.jpg')
 
 const MySelfComp: FC = () => {
     return (

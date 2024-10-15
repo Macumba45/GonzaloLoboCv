@@ -10,7 +10,7 @@ const ButtonCV: FC<Props> = ({ title }) => {
     const handleDownloadCV = () => {
         const link = document.createElement('a')
         link.href = PDF // Reemplaza con la URL de tu archivo PDF
-        link.download = 'GONZALOLOBOCV.pdf' // Nombre del archivo descargado
+        link.download = 'GONZALOLOBOCVFULLSTACK.pdf' // Nombre del archivo descargado
         link.click()
     }
 
