@@ -8,7 +8,6 @@ import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import MenuItem from '@mui/material/MenuItem'
-import { Link } from 'react-scroll'
 import { MainContainer, ContainerName, NameParrafo } from './styles'
 import HoverMotion from '../../animations/hover'
 import FloatHomeButton from '../FloatHomeButton'
@@ -33,6 +32,18 @@ const NavBarComp: FC = () => {
     const handleCloseNavMenu = () => {
         setAnchorElNav(null)
     }
+
+    const handleScroll = (elementId: string) => {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'nearest'
+            });
+        }
+        handleCloseNavMenu();
+    };
 
     return (
         <MainContainer>
@@ -104,33 +115,19 @@ const NavBarComp: FC = () => {
                                 {pages.map((page: any) => (
                                     <MenuItem
                                         key={page}
-                                        onClick={handleCloseNavMenu}
+                                        onClick={() => handleScroll(page.toLowerCase().replace(' ', '-'))}
+
                                     >
                                         <HoverMotion>
-                                            <Link
-                                                activeClass="active"
-                                                to={page.toLowerCase().replace(' ', '-')}
-                                                spy={true}
-                                                smooth={true}
-                                                duration={1500}
-                                                offset={-170}
-                                                onClick={handleCloseNavMenu}
-                                            >
-                                                <Typography textAlign="center">
-                                                    {page}
-                                                </Typography>
-                                            </Link>
+                                            <Typography textAlign="center">
+                                                {page}
+                                            </Typography>
+
                                         </HoverMotion>
                                     </MenuItem>
                                 ))}
                             </Menu>
                         </Box>
-                        {/* <a href="/">
-                                    <ImgLogo src={logo} alt="Logo" />
-                                </a> */}
-                        {/* <ImgLogoMobile
-                                    src={logo}
-                                /> */}
                         <Box
                             sx={{
                                 flexGrow: 1,
@@ -140,24 +137,13 @@ const NavBarComp: FC = () => {
                             {pages.map((page) => (
                                 <MenuItem
                                     key={page}
-                                    onClick={handleCloseNavMenu}
+                                    onClick={() => handleScroll(page.toLowerCase().replace(' ', '-'))}
                                 >
                                     <HoverMotion>
-                                        <Link
-                                            activeClass="active"
-                                            to={page!
-                                                .toLowerCase()
-                                                .replace(' ', '-')}
-                                            spy={true}
-                                            smooth={true}
-                                            duration={1000}
-                                            offset={-70}
-                                            onClick={handleCloseNavMenu}
-                                        >
-                                            <Typography textAlign="center">
-                                                {page}
-                                            </Typography>
-                                        </Link>
+
+                                        <Typography textAlign="center">
+                                            {page}
+                                        </Typography>
                                     </HoverMotion>
                                 </MenuItem>
                             ))}
