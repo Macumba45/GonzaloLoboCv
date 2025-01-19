@@ -3472,7 +3472,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-scroll@npm:^1.8.10":
+"@types/react-scroll@npm:1.8.10":
   version: 1.8.10
   resolution: "@types/react-scroll@npm:1.8.10"
   dependencies:
@@ -7398,7 +7398,7 @@ __metadata:
     "@types/node": ^16.7.13
     "@types/react": ^18.0.0
     "@types/react-dom": ^18.0.0
-    "@types/react-scroll": ^1.8.10
+    "@types/react-scroll": 1.8.10
     "@types/react-slick": ^0.23.10
     "@types/styled-components": ^5.1.34
     framer-motion: ^10.12.4
@@ -7410,7 +7410,6 @@ __metadata:
     react-material-ui-carousel: ^3.4.2
     react-router-dom: ^6.10.0
     react-scripts: 5.0.1
-    react-scroll: ^1.8.10
     react-use: ^17.4.0
     styled-components: ^6.1.14
     styled-reset: ^4.4.6
@@ -9455,13 +9454,6 @@ __metadata:
   version: 4.7.0
   resolution: "lodash.sortby@npm:4.7.0"
   checksum: db170c9396d29d11fe9a9f25668c4993e0c1331bcb941ddbd48fb76f492e732add7f2a47cfdf8e9d740fa59ac41bbfaf931d268bc72aab3ab49e9f89354d718c
-  languageName: node
-  linkType: hard
-
-"lodash.throttle@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "lodash.throttle@npm:4.1.1"
-  checksum: 129c0a28cee48b348aef146f638ef8a8b197944d4e9ec26c1890c19d9bf5a5690fe11b655c77a4551268819b32d27f4206343e30c78961f60b561b8608c8c805
   languageName: node
   linkType: hard
 
@@ -11806,19 +11798,6 @@ __metadata:
   bin:
     react-scripts: bin/react-scripts.js
   checksum: 92afa2f245c7092ccc97d5609dc7a2130616262e34da7f15072d9442e2d2e1d4909a91022abd1faac1336eb17c5525a10d9bd43e1ae374c7ec941ca20addca68
-  languageName: node
-  linkType: hard
-
-"react-scroll@npm:^1.8.10":
-  version: 1.9.0
-  resolution: "react-scroll@npm:1.9.0"
-  dependencies:
-    lodash.throttle: ^4.1.1
-    prop-types: ^15.7.2
-  peerDependencies:
-    react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: b84427d090600d9107adb57b93c8c059f9e36dcb4919660cd7d0547a6ce816b179bc54bc2941ff7d2497b2295f1a3e92dd0974c0dcedfde2fa5c93966441271e
   languageName: node
   linkType: hard
 
