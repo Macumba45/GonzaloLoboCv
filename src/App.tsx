@@ -1,14 +1,14 @@
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 import theme from './styles/theme'
 import { Reset } from 'styled-reset'
 import Router from './router'
 
 function App() {
     return (
-        <ThemeProvider theme={theme}>
+        <StyledThemeProvider theme={theme}>
             <Reset />
             <Router />
-        </ThemeProvider>
+        </StyledThemeProvider>
     )
 }
 
