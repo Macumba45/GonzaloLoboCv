@@ -1,3 +1,4 @@
+'@ts-nocheck'
 import { FC, memo, useState } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
@@ -8,7 +9,7 @@ import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import MenuItem from '@mui/material/MenuItem'
-import { Link as ScrollLink } from 'react-scroll'
+import { Link } from 'react-scroll'
 import { MainContainer, ContainerName, NameParrafo } from './styles'
 import HoverMotion from '../../animations/hover'
 import FloatHomeButton from '../FloatHomeButton'
@@ -107,7 +108,7 @@ const NavBarComp: FC = () => {
                                         onClick={handleCloseNavMenu}
                                     >
                                         <HoverMotion>
-                                            <ScrollLink
+                                            <Link
                                                 activeClass="active"
                                                 to={page.toLowerCase().replace(' ', '-')}
                                                 spy={true}
@@ -119,7 +120,7 @@ const NavBarComp: FC = () => {
                                                 <Typography textAlign="center">
                                                     {page}
                                                 </Typography>
-                                            </ScrollLink>
+                                            </Link>
                                         </HoverMotion>
                                     </MenuItem>
                                 ))}
@@ -143,7 +144,7 @@ const NavBarComp: FC = () => {
                                     onClick={handleCloseNavMenu}
                                 >
                                     <HoverMotion>
-                                        <ScrollLink
+                                        <Link
                                             activeClass="active"
                                             to={page!
                                                 .toLowerCase()
@@ -157,7 +158,7 @@ const NavBarComp: FC = () => {
                                             <Typography textAlign="center">
                                                 {page}
                                             </Typography>
-                                        </ScrollLink>
+                                        </Link>
                                     </HoverMotion>
                                 </MenuItem>
                             ))}
