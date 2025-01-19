@@ -6,8 +6,6 @@ import {
     SkillsContainerAll,
     SkillsContainer,
     MainContainer,
-    Title,
-    TitleContainer,
     ImgColombia,
     SkillsContainerLogo,
 } from './styles'
@@ -29,6 +27,11 @@ const postgres = require('../../assets/skills/postgres.png')
 const nextJs = require('../../assets/skills/nextjs.png')
 const prisma = require('../../assets/skills/prisma.png')
 const vercel = require('../../assets/skills/vercel.png')
+const drupal = require('../../assets/skills/drupal.png')
+const native = require('../../assets/skills/native.png')
+const twig = require('../../assets/skills/twig.png')
+const vue = require('../../assets/skills/vue.png')
+const php = require('../../assets/skills/php.png')
 
 interface Skills {
     [key: string]: any
@@ -52,6 +55,11 @@ const skills: Skills = {
     nextJs: nextJs,
     prisma: prisma,
     vercel: vercel,
+    drupal: drupal,
+    native: native,
+    twig: twig,
+    vue: vue,
+    php: php,
 }
 
 const SkillsComp: FC = () => {

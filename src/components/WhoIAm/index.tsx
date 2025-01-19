@@ -4,8 +4,6 @@ import {
     DescriptionContainer,
     MainContainer,
     SpanBold,
-    Title,
-    TitleContainer,
 } from './styles'
 
 const WhoIAmComp: FC = () => {
@@ -13,43 +11,33 @@ const WhoIAmComp: FC = () => {
         <MainContainer>
             <DescriptionContainer>
                 <Description>
-                    I'm Gonzalo, a web developer passionate about creating
-                    high-quality applications. I specialize in front-end
-                    technologies like{' '}
+                    I'm Gonzalo, a web developer specialized in creating
+                    high-quality applications. My tech stack includes{' '}
                     <SpanBold>
-                        {' '}
-                        React, NextJS, HTML, CSS, and JavaScript, as well as
-                        back-end technologies like NodeJS, prisma, MongoDB,
-                        Prisma and Postgres{' '}
+                        React, NextJS, TypeScript, HTML, CSS, and JavaScript for frontend
+                        development, complemented with NodeJS, MongoDB, Firebase, and PostgreSQL
+                        for backend solutions
                     </SpanBold>
-                    . I learned technologies like
+                    . I'm proficient with modern development tools like{' '}
                     <SpanBold>
-                        TypeScript, Firebase, Prisma, Docker, and Git.
-                    </SpanBold>{' '}
-                    I have also worked with UI design frameworks like{' '}
-                    <SpanBold>Framer and MUI.</SpanBold>
+                        Docker, Git, and UI frameworks such as MUI and Framer
+                    </SpanBold>.
                 </Description>
                 <Description>
-                    In addition, I have experience in finance, accounting,
-                    trade, and international business management{' '}
-                    <SpanBold>
-                        {' '}
-                        for clients in Spain, Colombia, and the United States.
-                    </SpanBold>{' '}
-                    I really want to learn new technologies and frameworks. I
-                    also stand out for my ability to solve problems and customer
-                    orientation.
+                    Currently, I'm working at <SpanBold>Aljamir Digital Solutions</SpanBold>{' '}
+                    where I've developed applications for <SpanBold>Grupo Aire</SpanBold> and
+                    lead the development of the <SpanBold>Honest ecosystem - including
+                        the main platform, customer app, and driver application</SpanBold>.
+                    This experience has strengthened my expertise in creating
+                    interconnected applications and managing complex user interfaces.
                 </Description>
                 <Description>
-                    I love working on challenging projects and coming up with
-                    creative solutions that help users.{' '}
-                    <SpanBold>
-                        If you are looking for a highly competent developer with
-                        extensive experience in React and other technologies,
-                        please do not hesitate to contact me.
-                    </SpanBold>{' '}
-                    I am excited to explore new job opportunities and use my
-                    skills to make a difference in the development industry.
+                    With a background in finance and international business management,
+                    I bring a unique perspective to software development. I'm passionate
+                    about <SpanBold>creating solutions that combine technical excellence
+                        with business value</SpanBold>. I'm always eager to take on new
+                    challenges and contribute to innovative projects. Let's connect and
+                    discuss how I can add value to your team.
                 </Description>
             </DescriptionContainer>
         </MainContainer>
