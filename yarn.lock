@@ -7410,7 +7410,7 @@ __metadata:
     react-material-ui-carousel: ^3.4.2
     react-router-dom: ^6.10.0
     react-scripts: 5.0.1
-    react-scroll: ^1.8.9
+    react-scroll: ^1.8.10
     react-use: ^17.4.0
     styled-components: ^6.1.14
     styled-reset: ^4.4.6
@@ -11809,16 +11809,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-scroll@npm:^1.8.9":
-  version: 1.8.9
-  resolution: "react-scroll@npm:1.8.9"
+"react-scroll@npm:^1.8.10":
+  version: 1.9.0
+  resolution: "react-scroll@npm:1.9.0"
   dependencies:
     lodash.throttle: ^4.1.1
     prop-types: ^15.7.2
   peerDependencies:
     react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 534ea65713a59ef7ddf623e38058220b654730352b624371cb2250bcf99784806b4564f3fa9295c969980e227e3de15903d95e069f9a3ca520ff0c0c1fb2e362
+  checksum: b84427d090600d9107adb57b93c8c059f9e36dcb4919660cd7d0547a6ce816b179bc54bc2941ff7d2497b2295f1a3e92dd0974c0dcedfde2fa5c93966441271e
   languageName: node
   linkType: hard
 
