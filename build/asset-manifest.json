@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.js": "/static/js/main.8f8c2de2.js",
+    "static/media/cocktails.png": "/static/media/cocktails.3cf79c54398febf95479.png",
+    "static/media/NASA.png": "/static/media/NASA.c4d5cfd3055ef0ed2911.png",
+    "static/media/BRENES.png": "/static/media/BRENES.52ad9a76d45035bba033.png",
+    "static/media/PAUL.png": "/static/media/PAUL.7897def8406e9d74112a.png",
+    "static/media/toscana.png": "/static/media/toscana.7cd36aca53142bc16b00.png",
+    "static/media/RICK.png": "/static/media/RICK.f4e2874d6dc6e477c1ba.png",
+    "static/media/inversor.png": "/static/media/inversor.bf16050f3e02ba62a413.png",
+    "static/media/FISH.png": "/static/media/FISH.3733c95af3c1fa2af1ae.png",
+    "static/media/allison.png": "/static/media/allison.785168396bda9f56bf99.png",
+    "static/media/growth.png": "/static/media/growth.ab6339c092a51b90368c.png",
+    "static/media/yo1.jpg": "/static/media/yo1.f469bd55bda109d078ee.jpg",
+    "static/media/9inch.png": "/static/media/9inch.ed34bfb05ed24e28bc77.png",
+    "static/media/sevillaeste.png": "/static/media/sevillaeste.f0ec3022cf123f8fc7ef.png",
+    "static/media/baby.png": "/static/media/baby.b26c89c438222050249f.png",
+    "static/media/php.png": "/static/media/php.1f32f22bff6c373c52fc.png",
+    "static/media/GONZALOLOBOCV.pdf": "/static/media/GONZALOLOBOCV.5ea3c0ad45d0a9b97165.pdf",
+    "static/media/exit.jpeg": "/static/media/exit.e9a78110d7d23b7fef60.jpeg",
+    "static/media/2nait.jpeg": "/static/media/2nait.2ac6945bfc791f9dafd0.jpeg",
+    "static/media/prisma.png": "/static/media/prisma.be2ccefb7f79573d6177.png",
+    "static/media/native.png": "/static/media/native.90fb0021be64f2b1ce7e.png",
+    "static/media/twig.png": "/static/media/twig.32b1deec583fd37c5123.png",
+    "static/media/vercel.png": "/static/media/vercel.26a04ec25a035353c1b4.png",
+    "static/media/nafas.jpeg": "/static/media/nafas.c2b849efe0bc8b56f4f1.jpeg",
+    "static/media/firebase.png": "/static/media/firebase.9cb44a5c305f7c52c6f7.png",
+    "static/media/freelance.webp": "/static/media/freelance.ec09a8821dfde6b521bd.webp",
+    "static/media/framer.webp": "/static/media/framer.59b3489cd36230dded5d.webp",
+    "index.html": "/index.html",
+    "main.8f8c2de2.js.map": "/static/js/main.8f8c2de2.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.8f8c2de2.js"
+  ]
+}
