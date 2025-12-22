@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
+export const MainContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +16,7 @@ export const MainContainer = styled.div`
     }
 `
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     text-align: center;
@@ -25,7 +25,7 @@ export const TitleContainer = styled.div`
     margin-bottom: 3rem;
 `
 
-export const Title = styled.h1`
+export const Title = styled.h1<React.HTMLAttributes<HTMLHeadingElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 3rem;
@@ -33,7 +33,7 @@ export const Title = styled.h1`
     text-align: center;
 `
 
-export const EntrepreContainerAll = styled.div`
+export const EntrepreContainerAll = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -42,7 +42,7 @@ export const EntrepreContainerAll = styled.div`
     }
 `
 
-export const EntrepreContainer = styled.div`
+export const EntrepreContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,14 +59,14 @@ export const EntrepreContainer = styled.div`
     }
 `
 
-export const EntrepreContainerLogo = styled.div`
+export const EntrepreContainerLogo = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 `
 
-export const EntrepreTitle = styled.h3`
+export const EntrepreTitle = styled.h3<React.HTMLAttributes<HTMLHeadingElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 1.4rem;
@@ -74,7 +74,7 @@ export const EntrepreTitle = styled.h3`
     text-align: center;
 `
 
-export const EntrepreSubTitle = styled.p`
+export const EntrepreSubTitle = styled.p<React.HTMLAttributes<HTMLParagraphElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 1rem;
@@ -82,7 +82,7 @@ export const EntrepreSubTitle = styled.p`
     text-align: center;
 `
 
-export const EntrepreDate = styled.p`
+export const EntrepreDate = styled.p<React.HTMLAttributes<HTMLParagraphElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 1rem;
@@ -90,19 +90,19 @@ export const EntrepreDate = styled.p`
     text-align: center;
 `
 
-export const ImgColombia = styled.img`
+export const ImgColombia = styled.img<React.ImgHTMLAttributes<HTMLImageElement>>`
     width: 5rem;
     height: auto;
     margin-bottom: 2rem;
     border-radius: 50%;
 `
 
-export const FlagColombia = styled.img`
+export const FlagColombia = styled.img<React.ImgHTMLAttributes<HTMLImageElement>>`
     width: 15px;
     margin-left: 0.2rem;
 `
 
-export const SpanBold = styled.span`
+export const SpanBold = styled.span<React.HTMLAttributes<HTMLSpanElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-weight: 700;

@@ -3,8 +3,6 @@ import TechAccordion from '../AccordionTechs'
 import { chunk } from 'lodash'
 import {
     MainContainer,
-    Title,
-    TitleContainer,
     ImgColombia,
     FullWidthCarousel,
     Container,

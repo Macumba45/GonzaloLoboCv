@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
+export const MainContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -11,13 +11,13 @@ export const MainContainer = styled.div`
     }
 `
 
-export const PictureContainer = styled.div`
+export const PictureContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     margin-top: 8rem;
 `
 
-export const Picture = styled.img`
+export const Picture = styled.img<React.ImgHTMLAttributes<HTMLImageElement>>`
     border-radius: 100%;
     width: 250px;
     height: 250px;
@@ -28,13 +28,13 @@ export const Picture = styled.img`
                 0 6px 20px rgba(0, 0, 0, 0.19);
 `
 
-export const NameContainer = styled.div`
+export const NameContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     margin-top: 3rem;
 `
 
-export const Name = styled.h1`
+export const Name = styled.h1<React.HTMLAttributes<HTMLHeadingElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 3rem;
@@ -42,7 +42,7 @@ export const Name = styled.h1`
     text-align: center;
 `
 
-export const StudiesContainer = styled.div`
+export const StudiesContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     margin-top: 3rem;
     display: flex;
     justify-content: center;
@@ -53,7 +53,7 @@ export const StudiesContainer = styled.div`
     }
 `
 
-export const StudiesTitles = styled.h3`
+export const StudiesTitles = styled.h3<React.HTMLAttributes<HTMLHeadingElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -62,7 +62,7 @@ export const StudiesTitles = styled.h3`
     text-align: center;
     font-weight: 700;
 `
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     align-items: center;

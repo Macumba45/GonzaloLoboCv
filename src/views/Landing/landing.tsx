@@ -7,7 +7,6 @@ import EducationComp from '../../components/Education'
 import WorkComp from '../../components/Work'
 import EntrepreneurComp from '../../components/Entrepreneur'
 import SkillsComp from '../../components/Skills'
-import BootcampProjects from '../../components/BootCampProjects'
 import FreelanceProjects from '../../components/FreelancerProjects'
 import SoftSkills from '../../components/SoftSkills'
 import AnimatedView from '../../animations/AnimatedContainer'
@@ -23,10 +22,6 @@ const Landing: FC = () => {
             <DividerWithChip label="About me" />
             <AnimatedView>
                 <WhoIAmComp />
-            </AnimatedView>
-            <DividerWithChip label="Full Stack Projects" />
-            <AnimatedView>
-                <FreelanceProjects />
             </AnimatedView>
             <DividerWithChip label="Education" />
             <AnimatedView>
@@ -48,11 +43,10 @@ const Landing: FC = () => {
             <AnimatedView>
                 <SoftSkills />
             </AnimatedView>
-            <DividerWithChip label="BootCamp Projects" />
+            <DividerWithChip label="Full Stack Projects" />
             <AnimatedView>
-                <BootcampProjects />
+                <FreelanceProjects />
             </AnimatedView>
-
             <AnimatedView>
                 <FooterComp />
             </AnimatedView>

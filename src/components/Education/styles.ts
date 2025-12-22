@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
+export const MainContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +16,7 @@ export const MainContainer = styled.div`
     }
 `
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     text-align: center;
@@ -25,7 +25,7 @@ export const TitleContainer = styled.div`
     margin-bottom: 3rem;
 `
 
-export const Title = styled.h1`
+export const Title = styled.h1<React.HTMLAttributes<HTMLHeadingElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 3rem;
@@ -33,7 +33,7 @@ export const Title = styled.h1`
     text-align: center;
 `
 
-export const EducationContainerAll = styled.div`
+export const EducationContainerAll = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
 
@@ -43,7 +43,7 @@ export const EducationContainerAll = styled.div`
     }
 `
 
-export const EducationContainer = styled.div`
+export const EducationContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@ export const EducationContainer = styled.div`
     }
 `
 
-export const EducationTitle = styled.h3`
+export const EducationTitle = styled.h3<React.HTMLAttributes<HTMLHeadingElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 1.4rem;
@@ -68,7 +68,7 @@ export const EducationTitle = styled.h3`
     text-align: center;
 `
 
-export const EducationSubTitle = styled.p`
+export const EducationSubTitle = styled.p<React.HTMLAttributes<HTMLParagraphElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 1rem;
@@ -76,7 +76,7 @@ export const EducationSubTitle = styled.p`
     text-align: center;
 `
 
-export const EducationDate = styled.p`
+export const EducationDate = styled.p<React.HTMLAttributes<HTMLParagraphElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 1rem;
@@ -84,12 +84,12 @@ export const EducationDate = styled.p`
     text-align: center;
 `
 
-export const ImgColombia = styled.img`
+export const ImgColombia = styled.img<React.ImgHTMLAttributes<HTMLImageElement>>`
     width: 15px;
     margin-left: 0.2rem;
 `
 
-export const SpanBold = styled.span`
+export const SpanBold = styled.span<React.HTMLAttributes<HTMLSpanElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-weight: 700;

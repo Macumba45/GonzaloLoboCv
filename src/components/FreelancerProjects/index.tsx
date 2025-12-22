@@ -1,59 +1,71 @@
 import { FC, memo } from 'react'
-import { useTheme } from '@mui/material/styles'
-import useMediaQuery from '@mui/material/useMediaQuery'
 import Carousel from 'react-material-ui-carousel'
 import {
     MainContainer,
-    Title,
-    TitleContainer,
     ImgColombia,
     ImageContainer,
     Container,
+    LabelProject,
 } from './styles'
 
 const FreelanceProjects: FC = () => {
-    const growthBooster = require('../../assets/macbook/growth.png')
-    const toscana = require('../../assets/macbook/toscana.png')
-    const inch = require('../../assets/macbook/9inch.png')
-    const baby = require('../../assets/macbook/baby.png')
-    const allison = require('../../assets/macbook/allison.png')
-    const fish = require('../../assets/macbook/FISH.png')
-    const sevilla = require('../../assets/macbook/sevillaeste.png')
-
+    const growthBooster = require('../../assets/macbook/grow.png')
+    const aire = require('../../assets/macbook/aire.png')
+    const savvy = require('../../assets/macbook/savvy.png')
+    const joobly = require('../../assets/macbook/joobly.png')
+    const fish = require('../../assets/macbook/fish.png')
+    const farmacia = require('../../assets/macbook/farmacia.png')
+    const nomada = require('../../assets/macbook/nomada.png')
+    const another = require('../../assets/macbook/another.png')
+    const rychat = require('../../assets/macbook/rychat.png')
 
     const projects: any = [
         {
-            img: growthBooster,
-            link: 'https://growthboosters.vercel.app/',
+            img: aire,
+            link: 'https://beaire.com',
+            label: 'Aire Ancients Baths - Spa & Wellness',
         },
         {
             img: fish,
             link: 'https://fishgramapp.vercel.app/es/maps',
+            label: 'FishGram - App to locate fishing spots',
         },
         {
-            img: sevilla,
+            img: farmacia,
             link: 'https://sevillaestefarmacia.vercel.app/',
+            label: 'Sevilla Este Farmacia - Pharmacy',
         },
         {
-            img: toscana,
-            link: 'https://la-toscana-casa-rural.vercel.app/',
+            img: savvy,
+            link: 'https://savvytechhotels.com/',
+            label: 'Savvy Tech Hotels - Hotel Fidelity App',
         },
         {
-            img: inch,
-            link: 'https://sacrifice.9inch.io/',
+            img: joobly,
+            link: 'https://www.joobly.cz/',
+            label: 'Joobly - Job Platform',
         },
         {
-            img: baby,
-            link: 'https://wonderbaby.vercel.app/dashboard/',
+            img: nomada,
+            link: 'https://nomadavibes.vercel.app/es',
+            label: 'Nomada Vibes - Travel Agency',
         },
         {
-            img: allison,
-            link: 'https://allisonpsicologia.vercel.app/',
+            img: another,
+            link: 'https://anotherwayff.com/es/madrid',
+            label: 'Another Way - Festival de cine',
+        },
+        {
+            img: rychat,
+            link: 'https://rychat.app/',
+            label: 'Rychat - Pide una moto en segundos',
+        },
+        {
+            img: growthBooster,
+            link: 'https://growthboosters.vercel.app/',
+            label: 'Growth Boosters - Marketing Agency',
         },
     ]
-    //const imagesGrouped = chunk(projects, 3) // Agrupamos los elementos en sub-arreglos de tres
-    const theme = useTheme()
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (
         <MainContainer id="projects" className="projects">
@@ -81,6 +93,9 @@ const FreelanceProjects: FC = () => {
                 >
                     {projects.map((item: any, index: any) => (
                         <ImageContainer key={index}>
+                            <LabelProject>
+                                {item.label}
+                            </LabelProject>
                             <a style={{ cursor: 'pointer' }} key={index} target="blank" href={item.link}>
                                 <ImgColombia src={item.img} />
                             </a>

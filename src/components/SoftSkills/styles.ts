@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
+export const MainContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     width: 100%;
     height: 1200px;
     display: flex;
@@ -12,7 +12,7 @@ export const MainContainer = styled.div`
     }
 `
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     text-align: center;
@@ -21,7 +21,7 @@ export const TitleContainer = styled.div`
     margin-bottom: 3rem;
 `
 
-export const Title = styled.h1`
+export const Title = styled.h1<React.HTMLAttributes<HTMLHeadingElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 3rem;
@@ -29,7 +29,7 @@ export const Title = styled.h1`
     text-align: center;
 `
 
-export const SkillsContainer = styled.div`
+export const SkillsContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     width: 750px;
     justify-content: center;
@@ -39,7 +39,7 @@ export const SkillsContainer = styled.div`
     }
 `
 
-export const SkillsContainerIndividual = styled.div`
+export const SkillsContainerIndividual = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     margin: 4rem;
     display: flex;
     justify-content: center;
@@ -49,7 +49,7 @@ export const SkillsContainerIndividual = styled.div`
         margin: 2rem;
     }
 `
-export const SofSkillsDescription = styled.p`
+export const SofSkillsDescription = styled.p<React.HTMLAttributes<HTMLParagraphElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     text-align: center;
     margin-top: 1rem;

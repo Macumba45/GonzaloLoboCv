@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
+export const MainContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +16,7 @@ export const MainContainer = styled.div`
     }
 `
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     text-align: center;
@@ -25,7 +25,7 @@ export const TitleContainer = styled.div`
     margin-bottom: 3rem;
 `
 
-export const Title = styled.h1`
+export const Title = styled.h1<React.HTMLAttributes<HTMLHeadingElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 3rem;
@@ -33,7 +33,7 @@ export const Title = styled.h1`
     text-align: center;
 `
 
-export const WorkContainerAll = styled.div`
+export const WorkContainerAll = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -42,7 +42,7 @@ export const WorkContainerAll = styled.div`
     }
 `
 
-export const WorkContainer = styled.div`
+export const WorkContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@ export const WorkContainer = styled.div`
     }
 `
 
-export const WorkContainerLogo = styled.div`
+export const WorkContainerLogo = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@ export const WorkContainerLogo = styled.div`
     height: 5rem;
 `
 
-export const WorkTitle = styled.h3`
+export const WorkTitle = styled.h3<React.HTMLAttributes<HTMLHeadingElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 1.4rem;
@@ -76,7 +76,7 @@ export const WorkTitle = styled.h3`
     text-align: center;
 `
 
-export const WorkSubTitle = styled.p`
+export const WorkSubTitle = styled.p<React.HTMLAttributes<HTMLParagraphElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 1rem;
@@ -84,7 +84,7 @@ export const WorkSubTitle = styled.p`
     text-align: center;
 `
 
-export const WorkDate = styled.p`
+export const WorkDate = styled.p<React.HTMLAttributes<HTMLParagraphElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 1rem;
@@ -92,19 +92,19 @@ export const WorkDate = styled.p`
     text-align: center;
 `
 
-export const ImgColombia = styled.img`
+export const ImgColombia = styled.img<React.ImgHTMLAttributes<HTMLImageElement>>`
     width: 12rem;
     height: 80px;
     margin-bottom: 3rem;
     border-radius: 10px;
 `
 
-export const ImgRamirez = styled.img`
+export const ImgRamirez = styled.img<React.ImgHTMLAttributes<HTMLImageElement>>`
     width: 13rem;
     margin-bottom: 3rem;
-`   
+`
 
-export const SpanBold = styled.span`
+export const SpanBold = styled.span<React.HTMLAttributes<HTMLSpanElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-weight: 700;

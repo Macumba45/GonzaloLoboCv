@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Carousel from 'react-material-ui-carousel'
 
-export const MainContainer = styled.div`
+export const MainContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
@@ -13,13 +13,13 @@ export const MainContainer = styled.div`
     }
 `
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     flex-direction: column;
     align-items: center;
 `
 
-export const Container = styled.div`
+export const Container = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     width: 100%;
     justify-content: center;
@@ -29,7 +29,7 @@ export const Container = styled.div`
     }
 `
 
-export const FullWidthCarousel = styled(Carousel)`
+export const FullWidthCarousel = styled(Carousel) <React.ComponentProps<typeof Carousel>>`
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ export const FullWidthCarousel = styled(Carousel)`
     padding: 0;
 `
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     text-align: center;
@@ -47,7 +47,7 @@ export const TitleContainer = styled.div`
     margin-bottom: 3rem;
 `
 
-export const Title = styled.h1`
+export const Title = styled.h1<React.HTMLAttributes<HTMLHeadingElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-size: 3rem;
@@ -55,7 +55,7 @@ export const Title = styled.h1`
     text-align: center;
 `
 
-export const ImgColombia = styled.img`
+export const ImgColombia = styled.img<React.ImgHTMLAttributes<HTMLImageElement>>`
     width: 20rem;
     height: auto;
     margin-left: 2rem;
@@ -65,7 +65,7 @@ export const ImgColombia = styled.img`
     }
 `
 
-export const SpanBold = styled.span`
+export const SpanBold = styled.span<React.HTMLAttributes<HTMLSpanElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: black;
     font-weight: 700;

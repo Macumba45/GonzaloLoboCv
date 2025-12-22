@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
+export const MainContainer = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,19 +10,19 @@ export const MainContainer = styled.div`
     background-color: #000000;
 `
 
-export const ContainerLogos = styled.div`
+export const ContainerLogos = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     align-items: center;
 `
-export const ContainerDesign = styled.div`
+export const ContainerDesign = styled.div<React.HTMLAttributes<HTMLDivElement>>`
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
 `
 
-export const DesignedBy = styled.a`
+export const DesignedBy = styled.a<React.AnchorHTMLAttributes<HTMLAnchorElement>>`
     font-family: ${({ theme }) => theme.fonts.poppins};
     color: white;
     font-size: 0.5rem;
