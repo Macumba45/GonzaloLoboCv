@@ -85,7 +85,6 @@ const FreelanceProjects: FC = () => {
                     }}
                     navButtonsProps={{
                         style: {
-                            // Estilos adicionales para los botones (next y prev)
                             backgroundColor: 'rgba(0, 0, 0, 0.824)', // Ejemplo de fondo transparente
                             // Añade otros estilos según tus necesidades
                         },

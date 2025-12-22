@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.js": "/static/js/main.d4935243.js",
+    "static/media/yo1.jpg": "/static/media/yo1.f469bd55bda109d078ee.jpg",
+    "static/media/nomada.png": "/static/media/nomada.54202ba980fbabbf9fda.png",
+    "static/media/another.png": "/static/media/another.61b373f21f57358f44b3.png",
+    "static/media/aire.png": "/static/media/aire.f3e43967a5067571c965.png",
+    "static/media/savvy.png": "/static/media/savvy.a36a5b9df0bf855c2e20.png",
+    "static/media/grow.png": "/static/media/grow.bc2ea47fae671f552d0b.png",
+    "static/media/fish.png": "/static/media/fish.e14eeb14099dad48bf8e.png",
+    "static/media/joobly.png": "/static/media/joobly.7d9ffce6b06a6a02d36d.png",
+    "static/media/php.png": "/static/media/php.1f32f22bff6c373c52fc.png",
+    "static/media/farmacia.png": "/static/media/farmacia.3418341fcfba4933e404.png",
+    "static/media/GONZALOLOBOCV.pdf": "/static/media/GONZALOLOBOCV.5ea3c0ad45d0a9b97165.pdf",
+    "static/media/exit.jpeg": "/static/media/exit.e9a78110d7d23b7fef60.jpeg",
+    "static/media/rychat.png": "/static/media/rychat.d479c6a033b56ff9ad51.png",
+    "static/media/2nait.jpeg": "/static/media/2nait.2ac6945bfc791f9dafd0.jpeg",
+    "static/media/prisma.png": "/static/media/prisma.be2ccefb7f79573d6177.png",
+    "static/media/native.png": "/static/media/native.90fb0021be64f2b1ce7e.png",
+    "static/media/twig.png": "/static/media/twig.32b1deec583fd37c5123.png",
+    "static/media/vercel.png": "/static/media/vercel.26a04ec25a035353c1b4.png",
+    "static/media/nafas.jpeg": "/static/media/nafas.c2b849efe0bc8b56f4f1.jpeg",
+    "static/media/firebase.png": "/static/media/firebase.9cb44a5c305f7c52c6f7.png",
+    "static/media/freelance.webp": "/static/media/freelance.ec09a8821dfde6b521bd.webp",
+    "static/media/framer.webp": "/static/media/framer.59b3489cd36230dded5d.webp",
+    "index.html": "/index.html",
+    "main.d4935243.js.map": "/static/js/main.d4935243.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d4935243.js"
+  ]
+}
