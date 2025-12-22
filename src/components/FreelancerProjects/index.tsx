@@ -13,7 +13,7 @@ const FreelanceProjects: FC = () => {
     const aire = require('../../assets/macbook/aire.png')
     const savvy = require('../../assets/macbook/savvy.png')
     const joobly = require('../../assets/macbook/joobly.png')
-    const fish = require('../../assets/macbook/fish.png')
+    // const fish = require('../../assets/macbook/fish.png')
     const farmacia = require('../../assets/macbook/farmacia.png')
     const nomada = require('../../assets/macbook/nomada.png')
     const another = require('../../assets/macbook/another.png')
@@ -25,11 +25,11 @@ const FreelanceProjects: FC = () => {
             link: 'https://beaire.com',
             label: 'Aire Ancients Baths - Spa & Wellness',
         },
-        {
-            img: fish,
-            link: 'https://fishgramapp.vercel.app/es/maps',
-            label: 'FishGram - App to locate fishing spots',
-        },
+        // {
+        //     img: fish,
+        //     link: 'https://fishgramapp.vercel.app/es/maps',
+        //     label: 'FishGram - App to locate fishing spots',
+        // },
         {
             img: farmacia,
             link: 'https://sevillaestefarmacia.vercel.app/',
